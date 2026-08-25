@@ -41,7 +41,7 @@ test("falls back to index.html for an unknown app route", async () => {
   assert.deepEqual(calls, ["/flow/step-two?source=share", "/index.html"]);
 });
 
-test("does not turn missing API or write requests into the app shell", async () => {
+test("does not turn API or write requests into the app shell", async () => {
   for (const request of [
     new Request("https://example.test/api/missing", { headers: { accept: "application/json" } }),
     new Request("https://example.test/flow", { method: "POST", headers: { accept: "text/html" } }),
@@ -56,8 +56,8 @@ test("does not turn missing API or write requests into the app shell", async () 
       },
     });
 
-    assert.equal(response.status, 404);
-    assert.equal(calls, 1);
+    assert.equal(response.status, request.url.includes("/api/") ? 503 : 404);
+    assert.equal(calls, request.url.includes("/api/") ? 0 : 1);
   }
 });
 
@@ -65,4 +65,5 @@ test("emits the files required by Sites packaging", async () => {
   await access(new URL("../dist/client/index.html", import.meta.url));
   await access(new URL("../dist/server/index.js", import.meta.url));
   await access(new URL("../dist/.openai/hosting.json", import.meta.url));
+  await access(new URL("../dist/.openai/drizzle/0000_init.sql", import.meta.url));
 });

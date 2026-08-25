@@ -1,15 +1,50 @@
-export default {
-  async fetch(request, env) {
-    const response = await env.ASSETS.fetch(request);
-    const acceptsHtml = request.headers.get("accept")?.includes("text/html");
+const json=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{"content-type":"application/json; charset=utf-8",...headers}});
+const clean=value=>typeof value==="string"?value.trim():value;
+const required=(body,fields)=>fields.every(field=>clean(body[field]));
+const cookie=request=>Object.fromEntries((request.headers.get("cookie")||"").split(";").filter(Boolean).map(part=>part.trim().split(/=(.*)/s).slice(0,2).map(decodeURIComponent)));
 
-    if (response.status !== 404 || !acceptsHtml || !["GET", "HEAD"].includes(request.method)) {
-      return response;
-    }
+async function schema(db){await db.batch([
+  db.prepare("CREATE TABLE IF NOT EXISTS categories (id INTEGER PRIMARY KEY AUTOINCREMENT, slug TEXT NOT NULL UNIQUE, label TEXT NOT NULL, title TEXT NOT NULL, sort_order INTEGER NOT NULL DEFAULT 0, is_visible INTEGER NOT NULL DEFAULT 1, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)"),
+  db.prepare("CREATE TABLE IF NOT EXISTS term_groups (id INTEGER PRIMARY KEY AUTOINCREMENT, category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE, name TEXT NOT NULL, sort_order INTEGER NOT NULL DEFAULT 0, UNIQUE(category_id,name))"),
+  db.prepare("CREATE TABLE IF NOT EXISTS terms (id INTEGER PRIMARY KEY AUTOINCREMENT, category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE, group_id INTEGER NOT NULL REFERENCES term_groups(id) ON DELETE CASCADE, name_zh TEXT NOT NULL, name_en TEXT NOT NULL DEFAULT '', description TEXT NOT NULL, visual_type TEXT NOT NULL DEFAULT 'generic', status TEXT NOT NULL DEFAULT 'published', sort_order INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)"),
+  db.prepare("CREATE TABLE IF NOT EXISTS survey_responses (id INTEGER PRIMARY KEY AUTOINCREMENT, source TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)"),
+  db.prepare("CREATE INDEX IF NOT EXISTS idx_terms_category ON terms(category_id)"),db.prepare("CREATE INDEX IF NOT EXISTS idx_terms_group ON terms(group_id)"),db.prepare("CREATE INDEX IF NOT EXISTS idx_terms_status ON terms(status)")
+])}
 
-    const indexUrl = new URL(request.url);
-    indexUrl.pathname = "/index.html";
-    indexUrl.search = "";
-    return env.ASSETS.fetch(new Request(indexUrl, request));
-  },
-};
+async function seed(db,assets,request){const count=await db.prepare("SELECT COUNT(*) count FROM categories").first();if(Number(count?.count))return;const url=new URL(request.url);url.pathname="/catalog-seed.json";url.search="";const catalog=await(await assets.fetch(new Request(url))).json();for(const category of catalog.categories){await db.prepare("INSERT OR IGNORE INTO categories (id,slug,label,title,sort_order,is_visible,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)").bind(category.id,category.slug,category.label,category.title,category.sort_order,category.is_visible,category.created_at,category.updated_at).run();for(const group of category.groups){await db.prepare("INSERT OR IGNORE INTO term_groups (id,category_id,name,sort_order) VALUES (?,?,?,?)").bind(group.id,group.category_id,group.name,group.sort_order).run();for(const term of group.terms)await db.prepare("INSERT OR IGNORE INTO terms (id,category_id,group_id,name_zh,name_en,description,visual_type,status,sort_order,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)").bind(term.id,term.category_id,term.group_id,term.name_zh,term.name_en,term.description,term.visual_type,term.status,term.sort_order,term.created_at,term.updated_at).run()}}}
+
+async function catalog(db){const [categories,groups,terms]=await Promise.all([db.prepare("SELECT * FROM categories WHERE is_visible=1 ORDER BY sort_order,id").all(),db.prepare("SELECT * FROM term_groups ORDER BY sort_order,id").all(),db.prepare("SELECT * FROM terms WHERE status='published' ORDER BY sort_order,id").all()]);return categories.results.map(category=>({...category,count:terms.results.filter(term=>term.category_id===category.id).length,groups:groups.results.filter(group=>group.category_id===category.id).map(group=>({...group,terms:terms.results.filter(term=>term.group_id===group.id)}))}))}
+
+const encoder=new TextEncoder(),b64=value=>btoa(value).replaceAll("+","-").replaceAll("/","_").replaceAll("=",""),unb64=value=>atob(value.replaceAll("-","+").replaceAll("_","/"));
+async function signature(value,secret){const key=await crypto.subtle.importKey("raw",encoder.encode(secret),{name:"HMAC",hash:"SHA-256"},false,["sign"]);return b64(String.fromCharCode(...new Uint8Array(await crypto.subtle.sign("HMAC",key,encoder.encode(value)))))}
+async function createSession(username,secret){const payload=b64(JSON.stringify({username,expires:Date.now()+604800000}));return `${payload}.${await signature(payload,secret)}`}
+async function sessionFor(request,secret){try{const token=cookie(request).abt_session;if(!token)return null;const [payload,sig]=token.split(".");if(sig!==await signature(payload,secret))return null;const data=JSON.parse(unb64(payload));return data.expires>Date.now()?{username:data.username}:null}catch{return null}}
+
+async function api(request,env){
+  if(!env.DB)return json({error:"数据库未配置"},503);await schema(env.DB);await seed(env.DB,env.ASSETS,request);
+  const url=new URL(request.url),path=url.pathname,method=request.method;
+  if(path==="/api/health"&&method==="GET")return json({ok:true,database:"D1"});
+  if(path==="/api/catalog"&&method==="GET")return json({categories:await catalog(env.DB)});
+  const body=method==="GET"?{}:await request.json().catch(()=>({}));
+  if(path==="/api/survey"&&method==="POST"){if(!clean(body.source))return json({error:"缺少渠道"},400);await env.DB.prepare("INSERT INTO survey_responses (source) VALUES (?)").bind(clean(body.source).slice(0,50)).run();return json({ok:true},201)}
+  const secret=env.ADMIN_PASSWORD;
+  if(path==="/api/admin/login"&&method==="POST"){if(!secret)return json({error:"管理端尚未配置"},503);const username=env.ADMIN_USERNAME||"admin";if(clean(body.username)!==username||String(body.password||"")!==secret)return json({error:"用户名或密码错误"},401);const token=await createSession(username,secret);return json({user:{id:1,username}},200,{"set-cookie":`abt_session=${token}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=604800`})}
+  if(path==="/api/admin/logout"&&method==="POST")return json({ok:true},200,{"set-cookie":"abt_session=; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=0"});
+  const admin=secret?await sessionFor(request,secret):null;if(path.startsWith("/api/admin/")&&!admin)return json({error:"请先登录"},401);
+  if(path==="/api/admin/me"&&method==="GET")return json({user:{id:1,username:admin.username}});
+  if(path==="/api/admin/dashboard"&&method==="GET"){const [categories,groups,terms,drafts,surveys,sources,recent]=await Promise.all([env.DB.prepare("SELECT COUNT(*) count FROM categories").first(),env.DB.prepare("SELECT COUNT(*) count FROM term_groups").first(),env.DB.prepare("SELECT COUNT(*) count FROM terms").first(),env.DB.prepare("SELECT COUNT(*) count FROM terms WHERE status='draft'").first(),env.DB.prepare("SELECT COUNT(*) count FROM survey_responses").first(),env.DB.prepare("SELECT source,COUNT(*) count FROM survey_responses GROUP BY source ORDER BY count DESC").all(),env.DB.prepare("SELECT terms.id,terms.name_zh,terms.status,terms.updated_at,categories.label category FROM terms JOIN categories ON categories.id=terms.category_id ORDER BY terms.updated_at DESC LIMIT 8").all()]);return json({stats:{categories:categories.count,groups:groups.count,terms:terms.count,drafts:drafts.count,surveyResponses:surveys.count},sources:sources.results,recent:recent.results})}
+  if(path==="/api/admin/categories"&&method==="GET")return json({categories:(await env.DB.prepare("SELECT categories.*,COUNT(terms.id) term_count FROM categories LEFT JOIN terms ON terms.category_id=categories.id GROUP BY categories.id ORDER BY categories.sort_order,categories.id").all()).results});
+  if(path==="/api/admin/groups"&&method==="GET"){const id=url.searchParams.get("category_id"),result=id?await env.DB.prepare("SELECT * FROM term_groups WHERE category_id=? ORDER BY sort_order,id").bind(id).all():await env.DB.prepare("SELECT * FROM term_groups ORDER BY category_id,sort_order,id").all();return json({groups:result.results})}
+  if(path==="/api/admin/terms"&&method==="GET"){const q=`%${clean(url.searchParams.get("q")||"")}%`,category=url.searchParams.get("category_id"),statement=category?env.DB.prepare("SELECT terms.*,categories.label category,term_groups.name group_name FROM terms JOIN categories ON categories.id=terms.category_id JOIN term_groups ON term_groups.id=terms.group_id WHERE terms.category_id=? AND (terms.name_zh LIKE ? OR terms.name_en LIKE ? OR terms.description LIKE ?) ORDER BY terms.updated_at DESC,terms.id DESC").bind(category,q,q,q):env.DB.prepare("SELECT terms.*,categories.label category,term_groups.name group_name FROM terms JOIN categories ON categories.id=terms.category_id JOIN term_groups ON term_groups.id=terms.group_id WHERE terms.name_zh LIKE ? OR terms.name_en LIKE ? OR terms.description LIKE ? ORDER BY terms.updated_at DESC,terms.id DESC").bind(q,q,q);return json({terms:(await statement.all()).results})}
+  const match=path.match(/^\/api\/admin\/(categories|groups|terms)(?:\/(\d+))?$/);if(!match)return json({error:"未找到接口"},404);const [,type,id]=match;
+  if(method==="POST"&&type==="categories"){if(!required(body,["slug","label","title"]))return json({error:"请填写完整"},400);const result=await env.DB.prepare("INSERT INTO categories (slug,label,title,sort_order,is_visible) VALUES (?,?,?,?,?)").bind(clean(body.slug),clean(body.label),clean(body.title),Number(body.sort_order)||0,body.is_visible===false?0:1).run();return json({id:Number(result.meta.last_row_id)},201)}
+  if(method==="POST"&&type==="groups"){if(!required(body,["category_id","name"]))return json({error:"请填写完整"},400);const result=await env.DB.prepare("INSERT INTO term_groups (category_id,name,sort_order) VALUES (?,?,?)").bind(body.category_id,clean(body.name),Number(body.sort_order)||0).run();return json({id:Number(result.meta.last_row_id)},201)}
+  if(method==="POST"&&type==="terms"){if(!required(body,["category_id","group_id","name_zh","description"]))return json({error:"请填写完整"},400);const result=await env.DB.prepare("INSERT INTO terms (category_id,group_id,name_zh,name_en,description,visual_type,status,sort_order) VALUES (?,?,?,?,?,?,?,?)").bind(body.category_id,body.group_id,clean(body.name_zh),clean(body.name_en||""),clean(body.description),clean(body.visual_type||"generic"),body.status==="draft"?"draft":"published",Number(body.sort_order)||0).run();return json({id:Number(result.meta.last_row_id)},201)}
+  if(method==="PUT"&&type==="categories"){await env.DB.prepare("UPDATE categories SET slug=?,label=?,title=?,sort_order=?,is_visible=?,updated_at=CURRENT_TIMESTAMP WHERE id=?").bind(clean(body.slug),clean(body.label),clean(body.title),Number(body.sort_order)||0,body.is_visible===false?0:1,id).run();return json({ok:true})}
+  if(method==="PUT"&&type==="groups"){await env.DB.prepare("UPDATE term_groups SET category_id=?,name=?,sort_order=? WHERE id=?").bind(body.category_id,clean(body.name),Number(body.sort_order)||0,id).run();return json({ok:true})}
+  if(method==="PUT"&&type==="terms"){await env.DB.prepare("UPDATE terms SET category_id=?,group_id=?,name_zh=?,name_en=?,description=?,visual_type=?,status=?,sort_order=?,updated_at=CURRENT_TIMESTAMP WHERE id=?").bind(body.category_id,body.group_id,clean(body.name_zh),clean(body.name_en||""),clean(body.description),clean(body.visual_type||"generic"),body.status==="draft"?"draft":"published",Number(body.sort_order)||0,id).run();return json({ok:true})}
+  if(method==="DELETE"){await env.DB.prepare(`DELETE FROM ${type==="groups"?"term_groups":type} WHERE id=?`).bind(id).run();return json({ok:true})}
+  return json({error:"不支持的操作"},405)
+}
+
+export default {async fetch(request,env){if(new URL(request.url).pathname.startsWith("/api/"))return api(request,env).catch(error=>json({error:error.message||"服务器内部错误"},500));const response=await env.ASSETS.fetch(request),acceptsHtml=request.headers.get("accept")?.includes("text/html");if(response.status!==404||!acceptsHtml||!["GET","HEAD"].includes(request.method))return response;const indexUrl=new URL(request.url);indexUrl.pathname="/index.html";indexUrl.search="";return env.ASSETS.fetch(new Request(indexUrl,request))}};
