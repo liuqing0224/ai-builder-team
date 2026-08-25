@@ -39,7 +39,7 @@ export function AdminApp(){
       {view==="dashboard"&&<Dashboard data={dashboard}/>} {view==="terms"&&<TermsView terms={terms} categories={categories} groups={groups} query={query} setQuery={setQuery} filterCategory={filterCategory} setFilterCategory={setFilterCategory} onAdd={()=>setModal({type:"term",data:{...blankTerm,category_id:categories[0]?.id||""}})} onEdit={term=>setModal({type:"term",data:term})} onDelete={id=>remove("terms",id)}/>} {view==="groups"&&<GroupsView groups={groups} categories={categories} onAdd={()=>setModal({type:"group",data:{...blankGroup,category_id:categories[0]?.id||""}})} onEdit={data=>setModal({type:"group",data})} onDelete={id=>remove("groups",id)}/>} {view==="categories"&&<CategoriesView categories={categories} onAdd={()=>setModal({type:"category",data:blankCategory})} onEdit={data=>setModal({type:"category",data})} onDelete={id=>remove("categories",id)}/>}
     </main>
     {notice&&<div className="admin-toast">{notice}</div>}
-    {modal?.type==="term"&&<Modal title={modal.data.id?"编辑术语":"新增术语"} onClose={()=>setModal(null)}><TermForm initial={modal.data} categories={categories} allGroups={groups} onLoadGroups={loadGroups} onSave={saveTerm} onCancel={()=>setModal(null)}/></Modal>}
+    {modal?.type==="term"&&<Modal title={modal.data.id?"编辑术语":"新增术语"} onClose={()=>setModal(null)}><TermForm initial={modal.data} categories={categories} allGroups={groups} onSave={saveTerm} onCancel={()=>setModal(null)}/></Modal>}
     {modal?.type==="group"&&<Modal title={modal.data.id?"编辑分组":"新增分组"} onClose={()=>setModal(null)}><GroupForm initial={modal.data} categories={categories} onSave={saveGroup}/></Modal>}
     {modal?.type==="category"&&<Modal title={modal.data.id?"编辑分类":"新增分类"} onClose={()=>setModal(null)}><CategoryForm initial={modal.data} onSave={saveCategory}/></Modal>}
   </div>
@@ -53,10 +53,9 @@ function CategoriesView({categories,onAdd,onEdit,onDelete}){return <section clas
 
 function GroupsView({groups,categories,onAdd,onEdit,onDelete}){const label=id=>categories.find(c=>String(c.id)===String(id))?.label||"-";return <section className="admin-section"><div className="section-actions"><div><h2>内容分组</h2><p>分组决定公开目录侧栏和卡片区块。</p></div><button className="primary-button" onClick={onAdd}><Plus size={17}/>新增分组</button></div><div className="category-admin-grid">{groups.map(group=><article key={group.id}><span className="category-order">{String(group.sort_order+1).padStart(2,"0")}</span><div><h3>{group.name}</h3><p>所属分类：{label(group.category_id)}</p><small>分组 ID {group.id}</small></div><div><button onClick={()=>onEdit(group)} title="编辑"><PenLine size={16}/></button><button onClick={()=>onDelete(group.id)} title="删除"><Trash2 size={16}/></button></div></article>)}</div></section>}
 
-function TermForm({initial,categories,allGroups,onLoadGroups,onSave,onCancel}){
+function TermForm({initial,categories,allGroups,onSave,onCancel}){
   const normalized={...initial,details:{...blankDetails,...(initial.details||{}),implementation_steps:initial.details?.implementation_steps?.length?initial.details.implementation_steps:[""],recommended_tools:initial.details?.recommended_tools?.length?initial.details.recommended_tools:[{name:"",role:"",use_when:""}]}};
   const [form,setForm]=useState(normalized),[groups,setGroups]=useState(allGroups.filter(group=>String(group.category_id)===String(initial.category_id))),[error,setError]=useState("");
-  useEffect(()=>{onLoadGroups(form.category_id).then(()=>{})},[]);
   const setDetails=details=>setForm(current=>({...current,details:{...current.details,...details}}));
   const categoryChanged=async value=>{const data=await api(`/api/admin/groups?category_id=${value}`);setGroups(data.groups);setForm({...form,category_id:value,group_id:data.groups[0]?.id||""})};
   const changeStep=(index,value)=>setDetails({implementation_steps:form.details.implementation_steps.map((step,i)=>i===index?value:step)});
