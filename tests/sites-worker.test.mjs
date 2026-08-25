@@ -67,6 +67,14 @@ test("emits the files required by Sites packaging", async () => {
   await access(new URL("../dist/.openai/hosting.json", import.meta.url));
   await access(new URL("../dist/.openai/drizzle/0000_init.sql", import.meta.url));
   await access(new URL("../dist/.openai/drizzle/0001_term_details.sql", import.meta.url));
+  await access(new URL("../dist/.openai/drizzle/0002_plain_language_details.sql", import.meta.url));
+});
+
+test("plain-language migration only replaces untouched seed details", async () => {
+  const migration = await readFile(new URL("../db/migrations/0002_plain_language_details.sql", import.meta.url), "utf8");
+  const updates = migration.match(/^UPDATE terms /gm) || [];
+  assert.equal(updates.length, 62);
+  assert.equal((migration.match(/ AND details_json=/g) || []).length, 62);
 });
 
 test("all seeded terms include actionable implementation details", async () => {

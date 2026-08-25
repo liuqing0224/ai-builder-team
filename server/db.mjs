@@ -67,6 +67,7 @@ const termColumns = db.prepare("PRAGMA table_info(terms)").all();
 if (!termColumns.some(column => column.name === "details_json")) {
   db.exec("ALTER TABLE terms ADD COLUMN details_json TEXT NOT NULL DEFAULT '{}'");
 }
+db.exec(readFileSync(resolve("db/migrations/0002_plain_language_details.sql"), "utf8"));
 
 const detailsString = details => JSON.stringify(details || {});
 
