@@ -1,5 +1,5 @@
 import { useEffect,useMemo,useState } from "react";
-import { Bookmark,Check,ChevronDown,Code2,ExternalLink,GitBranch,Heart,Library,Moon,Search,Sun,X } from "lucide-react";
+import { ArrowRight,Bookmark,Check,ChevronDown,Code2,ExternalLink,GitBranch,Heart,Library,Moon,Search,Sun,X } from "lucide-react";
 import { api } from "./api.js";
 import "./public-redesign.css";
 
@@ -15,12 +15,12 @@ function Demo({type}){
   return <div className="demo generic-demo"><div className="generic-icon"><Code2 size={22}/></div><div><b>{type.toUpperCase()}</b><span>清晰的结构 · 可验证的结果</span></div><Check size={18}/></div>;
 }
 
-function TermCard({term,saved,onSave,featured,index}){return <article className={featured?"card featured":"card"} tabIndex="0"><div className="term-index">{String(index+1).padStart(2,"0")}</div><div className="card-copy"><div className="card-title"><h3>{term.name_zh} {term.name_en&&<span>{term.name_en}</span>}</h3><button className={saved?"save active":"save"} onClick={onSave} aria-label={saved?"取消收藏":"收藏术语"}><Bookmark size={18} fill={saved?"currentColor":"none"}/></button></div><p className="quote">{term.description}</p></div>{featured&&<Demo type={term.visual_type}/>}</article>}
+function TermCard({term,saved,onSave,featured,index}){return <article className={featured?"card featured":"card"}><div className="term-index">{String(index+1).padStart(2,"0")}</div><div className="card-copy"><div className="card-title"><h3>{term.name_zh} {term.name_en&&<span>{term.name_en}</span>}</h3><button className={saved?"save active":"save"} onClick={onSave} aria-label={saved?"取消收藏":"收藏术语"}><Bookmark size={18} fill={saved?"currentColor":"none"}/></button></div><p className="quote">{term.description}</p><a className="term-detail-link" href={`/terms/${term.id}`}>查看实施指南 <ArrowRight size={15}/></a></div>{featured&&<Demo type={term.visual_type}/>}</article>}
 
 function LoadingState(){return <div className="public-loading" aria-label="正在加载术语库"><div className="loading-top"/><div className="loading-tabs"><i/><i/><i/><i/></div><div className="loading-body"><aside><i/><i/><i/></aside><main><i className="loading-title"/><div className="loading-grid"><i/><i/><i/></div></main></div></div>}
 
 export function PublicApp(){
-  const [categories,setCategories]=useState([]),[active,setActive]=useState(""),[query,setQuery]=useState(""),[dark,setDark]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState("");
+  const [categories,setCategories]=useState([]),[active,setActive]=useState(()=>new URLSearchParams(location.search).get("category")||""),[query,setQuery]=useState(""),[dark,setDark]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState("");
   const [saved,setSaved]=useState(()=>new Set(JSON.parse(localStorage.getItem("saved-terms")||"[]")));
   const [survey,setSurvey]=useState(()=>sessionStorage.getItem("survey-seen")!=="1");
   const load=()=>{setLoading(true);api("/api/catalog").then(data=>{setCategories(data.categories);setActive(current=>current||data.categories[0]?.slug||"");setError("")}).catch(e=>setError(e.message)).finally(()=>setLoading(false))};

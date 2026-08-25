@@ -1,0 +1,1 @@
+ALTER TABLE terms ADD COLUMN details_json TEXT NOT NULL DEFAULT '{}';

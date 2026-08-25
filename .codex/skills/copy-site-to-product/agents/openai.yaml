@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copy Site to Product"
+  short_description: "Clone a reference site into a production-ready branded product"
+  default_prompt: "Use $copy-site-to-product to turn this reference site into a branded, production-ready project."

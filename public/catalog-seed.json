@@ -1,1 +1,2786 @@
-{"categories":[{"id":1,"slug":"frontend","label":"前端","title":"前端 VibeCoding 术语","sort_order":0,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":28,"groups":[{"id":1,"category_id":1,"name":"网页基础","sort_order":0,"terms":[{"id":1,"category_id":1,"group_id":1,"name_zh":"前端","name_en":"Frontend","description":"老听人说前端、后端，这两个到底有什么区别？","visual_type":"browser","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":2,"category_id":1,"group_id":1,"name_zh":"组件","name_en":"Component","description":"把这个重复出现的商品区做成组件，改一个地方就能同步更新。","visual_type":"component","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":3,"category_id":1,"group_id":1,"name_zh":"状态","name_en":"State","description":"提交按钮点下去先显示保存中，成功或失败后再更新提示。","visual_type":"state","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":4,"category_id":1,"group_id":1,"name_zh":"Markdown","name_en":"","description":"AI 写的文档里全是 # 和星号，这是什么？能变成好看的排版吗？","visual_type":"markdown","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":5,"category_id":1,"group_id":1,"name_zh":"HTML","name_en":"","description":"AI 写出来的代码里一堆 < > 和英文单词，这些东西是干嘛的？","visual_type":"html","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":6,"category_id":1,"group_id":1,"name_zh":"CSS","name_en":"","description":"按钮能点但颜色一直是灰色，帮我找出是哪条样式把主题色覆盖了。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":7,"category_id":1,"group_id":1,"name_zh":"文档对象模型","name_en":"DOM","description":"确认运行时页面到底插入了什么节点。","visual_type":"generic","status":"published","sort_order":6,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":8,"category_id":1,"group_id":1,"name_zh":"页面标题","name_en":"Title Tag","description":"让浏览器标签显示正确的页面名称。","visual_type":"generic","status":"published","sort_order":7,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":9,"category_id":1,"group_id":1,"name_zh":"页面元数据","name_en":"Page Metadata","description":"检查搜索摘要和链接分享会显示什么。","visual_type":"generic","status":"published","sort_order":8,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":10,"category_id":1,"group_id":1,"name_zh":"网站图标","name_en":"Favicon","description":"换掉标签页和书签里的品牌小图标。","visual_type":"generic","status":"published","sort_order":9,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":11,"category_id":1,"group_id":1,"name_zh":"Open Graph","name_en":"","description":"为文章设置正确的分享卡片信息。","visual_type":"generic","status":"published","sort_order":10,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":12,"category_id":1,"group_id":1,"name_zh":"Web 应用清单","name_en":"Web App Manifest","description":"检查应用名称、图标、启动地址和显示方式。","visual_type":"generic","status":"published","sort_order":11,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":13,"category_id":1,"group_id":1,"name_zh":"撤销","name_en":"Undo","description":"这个改动不对，回到动手之前的样子。","visual_type":"generic","status":"published","sort_order":12,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":14,"category_id":1,"group_id":1,"name_zh":"无障碍","name_en":"Accessibility","description":"检查图片说明、键盘操作和文字对比度。","visual_type":"generic","status":"published","sort_order":13,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]},{"id":2,"category_id":1,"name":"按钮与链接","sort_order":1,"terms":[{"id":15,"category_id":1,"group_id":2,"name_zh":"按钮","name_en":"Button","description":"帮我加个按钮，点了就能把内容存下来。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":16,"category_id":1,"group_id":2,"name_zh":"链接","name_en":"Link","description":"这段文字要能让人点，点了跳到另一个页面。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]},{"id":3,"category_id":1,"name":"表单","sort_order":2,"terms":[{"id":17,"category_id":1,"group_id":3,"name_zh":"输入框","name_en":"Input","description":"页面上要有个填邮箱的地方。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":18,"category_id":1,"group_id":3,"name_zh":"多行文本框","name_en":"Textarea","description":"要让用户写一大段话，一行肯定不够。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":19,"category_id":1,"group_id":3,"name_zh":"复选框","name_en":"Checkbox","description":"这几个选项不冲突，用户想选几个都行。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":20,"category_id":1,"group_id":3,"name_zh":"开关","name_en":"Switch","description":"像手机设置里那样，这个功能一拨就开、再拨就关。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":21,"category_id":1,"group_id":3,"name_zh":"日期选择器","name_en":"DatePicker","description":"日期别让用户手输，给个日历直接挑。","visual_type":"generic","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":22,"category_id":1,"group_id":3,"name_zh":"上传","name_en":"Upload","description":"用户要能把自己的图片传上来。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]},{"id":4,"category_id":1,"name":"内容展示","sort_order":3,"terms":[{"id":23,"category_id":1,"group_id":4,"name_zh":"表格","name_en":"Table","description":"订单数据堆在一起太乱了，帮我排成表格，一行一条。","visual_type":"table","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":24,"category_id":1,"group_id":4,"name_zh":"卡片","name_en":"Card","description":"每个商品做成一张小卡片，图在上面，名字价格在下面。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":25,"category_id":1,"group_id":4,"name_zh":"标签页","name_en":"Tabs","description":"内容太多了，帮我分几个页签，点一下就换一屏。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":26,"category_id":1,"group_id":4,"name_zh":"空状态","name_en":"Empty","description":"没数据时别一片空白，告诉用户接下来怎么办。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":27,"category_id":1,"group_id":4,"name_zh":"图表","name_en":"Chart","description":"用图表比较这六个月的订单变化。","visual_type":"chart","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":28,"category_id":1,"group_id":4,"name_zh":"聊天界面","name_en":"Chat UI","description":"补全消息列表、输入区、发送中和失败重试。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":2,"slug":"backend","label":"后端","title":"后端 VibeCoding 术语","sort_order":1,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":6,"groups":[{"id":5,"category_id":2,"name":"接口与数据","sort_order":0,"terms":[{"id":29,"category_id":2,"group_id":5,"name_zh":"接口","name_en":"API","description":"让前端通过一个稳定地址读取订单数据。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":30,"category_id":2,"group_id":5,"name_zh":"数据库","name_en":"Database","description":"把用户资料持久保存，下次打开仍然能找到。","visual_type":"table","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":31,"category_id":2,"group_id":5,"name_zh":"身份验证","name_en":"Authentication","description":"登录后确认这个请求到底是谁发来的。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":32,"category_id":2,"group_id":5,"name_zh":"缓存","name_en":"Cache","description":"重复数据先从更快的地方读取，减少等待。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":33,"category_id":2,"group_id":5,"name_zh":"队列","name_en":"Queue","description":"耗时任务先排队处理，不要堵住当前请求。","visual_type":"generic","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":34,"category_id":2,"group_id":5,"name_zh":"日志","name_en":"Log","description":"记录运行过程，出错时能找到发生了什么。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":3,"slug":"product","label":"产品","title":"产品 VibeCoding 术语","sort_order":2,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":8,"groups":[{"id":6,"category_id":3,"name":"用户与需求","sort_order":0,"terms":[{"id":35,"category_id":3,"group_id":6,"name_zh":"用户故事","name_en":"User Story","description":"写清楚是谁遇到了什么问题，解决以后有什么用。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":36,"category_id":3,"group_id":6,"name_zh":"用户用例","name_en":"Use Case","description":"把用户怎么发起、系统怎么回应写完整。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":37,"category_id":3,"group_id":6,"name_zh":"用户流程","name_en":"User Flow","description":"画出用户从进来到完成目标经过的步骤。","visual_type":"flow","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":38,"category_id":3,"group_id":6,"name_zh":"用户旅程","name_en":"User Journey","description":"整理用户从了解到开始使用的完整过程。","visual_type":"flow","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]},{"id":7,"category_id":3,"name":"产品规划","sort_order":1,"terms":[{"id":39,"category_id":3,"group_id":7,"name_zh":"PRD","name_en":"","description":"把要做的东西、目标和验收标准写清楚。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":40,"category_id":3,"group_id":7,"name_zh":"MVP","name_en":"","description":"先做最小的一版验证核心价值。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":41,"category_id":3,"group_id":7,"name_zh":"产品待办列表","name_en":"Product Backlog","description":"把需求按重要程度整理成待办列表。","visual_type":"table","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":42,"category_id":3,"group_id":7,"name_zh":"产品路线图","name_en":"Roadmap","description":"整理接下来几个阶段的重点目标。","visual_type":"flow","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":4,"slug":"stack","label":"技术栈","title":"技术栈 VibeCoding 术语","sort_order":3,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":6,"groups":[{"id":8,"category_id":4,"name":"开发工具","sort_order":0,"terms":[{"id":43,"category_id":4,"group_id":8,"name_zh":"React","name_en":"","description":"用组件和状态组织交互式网页。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":44,"category_id":4,"group_id":8,"name_zh":"Next.js","name_en":"","description":"为 React 补齐路由和全栈能力。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":45,"category_id":4,"group_id":8,"name_zh":"TypeScript","name_en":"","description":"提前约束数据形状，减少错误。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":46,"category_id":4,"group_id":8,"name_zh":"Vite","name_en":"","description":"快速启动现代前端项目并打包。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":47,"category_id":4,"group_id":8,"name_zh":"Tailwind CSS","name_en":"","description":"用原子类快速组合界面样式。","visual_type":"generic","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":48,"category_id":4,"group_id":8,"name_zh":"Node.js","name_en":"","description":"让 JavaScript 运行在服务器端。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":5,"slug":"ai","label":"AI","title":"AI VibeCoding 术语","sort_order":4,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":6,"groups":[{"id":9,"category_id":5,"name":"模型与提示","sort_order":0,"terms":[{"id":49,"category_id":5,"group_id":9,"name_zh":"提示词","name_en":"Prompt","description":"把目标、背景、限制和输出格式说清楚。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":50,"category_id":5,"group_id":9,"name_zh":"上下文","name_en":"Context","description":"提供模型完成任务所需的信息。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":51,"category_id":5,"group_id":9,"name_zh":"智能体","name_en":"Agent","description":"让模型规划步骤、调用工具并检查结果。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":52,"category_id":5,"group_id":9,"name_zh":"幻觉","name_en":"Hallucination","description":"模型说得像真的，但事实并不成立。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":53,"category_id":5,"group_id":9,"name_zh":"检索增强","name_en":"RAG","description":"先检索资料，再让模型据此回答。","visual_type":"generic","status":"published","sort_order":4,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":54,"category_id":5,"group_id":9,"name_zh":"多模态","name_en":"Multimodal","description":"同时理解文字、图片和声音。","visual_type":"generic","status":"published","sort_order":5,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":6,"slug":"git","label":"Git","title":"Git VibeCoding 术语","sort_order":5,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":4,"groups":[{"id":10,"category_id":6,"name":"版本管理","sort_order":0,"terms":[{"id":55,"category_id":6,"group_id":10,"name_zh":"提交","name_en":"Commit","description":"把一组相关改动保存为版本节点。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":56,"category_id":6,"group_id":10,"name_zh":"分支","name_en":"Branch","description":"在不影响主线的情况下开发功能。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":57,"category_id":6,"group_id":10,"name_zh":"合并","name_en":"Merge","description":"把一个分支的改动整合到另一个分支。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":58,"category_id":6,"group_id":10,"name_zh":"冲突","name_en":"Conflict","description":"两边改到同一处，需要决定保留什么。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]},{"id":7,"slug":"design","label":"设计风格","title":"设计风格 VibeCoding 术语","sort_order":6,"is_visible":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05","count":4,"groups":[{"id":11,"category_id":7,"name":"视觉方向","sort_order":0,"terms":[{"id":59,"category_id":7,"group_id":11,"name_zh":"极简主义","name_en":"Minimalism","description":"减少非必要元素，突出核心内容。","visual_type":"generic","status":"published","sort_order":0,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":60,"category_id":7,"group_id":11,"name_zh":"粗野主义","name_en":"Brutalism","description":"用直接且粗粝的视觉表达态度。","visual_type":"generic","status":"published","sort_order":1,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":61,"category_id":7,"group_id":11,"name_zh":"玻璃拟态","name_en":"Glassmorphism","description":"用半透明和背景模糊营造层次。","visual_type":"generic","status":"published","sort_order":2,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"},{"id":62,"category_id":7,"group_id":11,"name_zh":"新拟态","name_en":"Neumorphism","description":"用柔和高光与阴影模拟表面。","visual_type":"generic","status":"published","sort_order":3,"created_at":"2026-08-25 02:14:05","updated_at":"2026-08-25 02:14:05"}]}]}]}
+{
+  "categories": [
+    {
+      "id": 1,
+      "slug": "frontend",
+      "label": "前端",
+      "title": "前端 VibeCoding 术语",
+      "sort_order": 0,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 28,
+      "groups": [
+        {
+          "id": 1,
+          "category_id": 1,
+          "name": "网页基础",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 1,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "前端",
+              "name_en": "Frontend",
+              "description": "老听人说前端、后端，这两个到底有什么区别？",
+              "visual_type": "browser",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "前端是用户在浏览器或客户端中直接看到并操作的界面层，负责展示数据、接收输入并反馈状态。",
+                "why_it_matters": "它把产品规则转换为可理解、可操作的体验，也是性能、无障碍和品牌一致性的主要承载层。",
+                "implementation_steps": [
+                  "盘点页面、路由和关键用户流程",
+                  "按展示、交互、数据访问拆分职责",
+                  "接入 API 并补齐加载、空、错误和成功状态",
+                  "在桌面与移动端验证键盘和触控行为"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "React + Vite",
+                    "role": "组织组件、状态并快速构建",
+                    "use_when": "已有 React 单页应用或交互较多时"
+                  },
+                  {
+                    "name": "Next.js",
+                    "role": "提供文件路由、服务端渲染和全栈能力",
+                    "use_when": "需要 SEO、服务端数据获取或多页面路由时"
+                  },
+                  {
+                    "name": "原生 Web",
+                    "role": "控制依赖和运行成本",
+                    "use_when": "页面简单、交互有限时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「前端页面」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：盘点页面、路由和关键用户流程；按展示、交互、数据访问拆分职责；接入 API 并补齐加载、空、错误和成功状态；在桌面与移动端验证键盘和触控行为。\n工具选择：优先使用 React + Vite，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：主要流程可完成，刷新后状态符合设计，移动端无溢出，控制台无阻塞错误"
+              }
+            },
+            {
+              "id": 2,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "组件",
+              "name_en": "Component",
+              "description": "把这个重复出现的商品区做成组件，改一个地方就能同步更新。",
+              "visual_type": "component",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "组件是拥有明确职责和输入输出的可复用界面单元。抽象组件的意义是建立稳定修改边界、复用交互与视觉规则，并形成一致的调用 API。",
+                "why_it_matters": "好的抽象让一次修复覆盖所有调用点。出现两次以上、具备独立业务语义、拥有内部状态或需要单独测试，满足其一才值得考虑抽象。只出现一次的简单结构、仅为缩短文件、差异大于共性的区域不应强行抽象。",
+                "implementation_steps": [
+                  "搜索重复结构并列出共同点与差异",
+                  "设计只覆盖真实变化点的最小 props 接口",
+                  "提取组件并保留语义化 HTML 与无障碍属性",
+                  "逐个替换调用点并验证视觉和行为",
+                  "删除旧重复代码并为关键分支补测试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "项目现有组件与 CSS",
+                    "role": "保持视觉和交互一致，避免重复依赖",
+                    "use_when": "仓库已经有明确设计语言时"
+                  },
+                  {
+                    "name": "Radix UI / shadcn/ui",
+                    "role": "提供可访问的无样式或可拥有源码的交互原语",
+                    "use_when": "需要弹窗、菜单、标签页等复杂交互且项目允许引入依赖时"
+                  },
+                  {
+                    "name": "Ant Design",
+                    "role": "快速搭建高密度管理界面",
+                    "use_when": "目标是后台系统且接受统一视觉语言时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「可复用组件抽象」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：搜索重复结构并列出共同点与差异；设计只覆盖真实变化点的最小 props 接口；提取组件并保留语义化 HTML 与无障碍属性；逐个替换调用点并验证视觉和行为；删除旧重复代码并为关键分支补测试。\n工具选择：优先使用 项目现有组件与 CSS，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：至少两个真实调用点使用同一组件，props 不暴露内部实现，修改一个组件可同步生效且原行为不回归"
+              }
+            },
+            {
+              "id": 3,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "状态",
+              "name_en": "State",
+              "description": "提交按钮点下去先显示保存中，成功或失败后再更新提示。",
+              "visual_type": "state",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "状态是会随用户操作、请求结果或时间变化，并影响界面输出的数据。",
+                "why_it_matters": "显式状态能让加载、成功、失败、选择和权限等变化可预测，避免从 DOM 或多个布尔值反推真实情况。",
+                "implementation_steps": [
+                  "列出所有可观察状态和触发事件",
+                  "区分服务端数据、页面共享状态和组件局部状态",
+                  "用枚举或状态机代替互相矛盾的布尔组合",
+                  "让每个状态拥有明确渲染和恢复路径",
+                  "验证快速重复操作和失败重试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "React useState/useReducer",
+                    "role": "管理局部交互和有限状态转换",
+                    "use_when": "状态只属于一个组件子树时"
+                  },
+                  {
+                    "name": "TanStack Query",
+                    "role": "管理服务端缓存、重试和失效",
+                    "use_when": "数据来自 API 且多个界面复用时"
+                  },
+                  {
+                    "name": "XState",
+                    "role": "描述复杂且严格的状态机",
+                    "use_when": "状态分支多、转换受规则约束时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「界面状态」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：列出所有可观察状态和触发事件；区分服务端数据、页面共享状态和组件局部状态；用枚举或状态机代替互相矛盾的布尔组合；让每个状态拥有明确渲染和恢复路径；验证快速重复操作和失败重试。\n工具选择：优先使用 React useState/useReducer，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：不存在无法到达或互相矛盾的状态，异步请求有加载和失败反馈，重复操作不会产生脏数据"
+              }
+            },
+            {
+              "id": 4,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "Markdown",
+              "name_en": "",
+              "description": "AI 写的文档里全是 # 和星号，这是什么？能变成好看的排版吗？",
+              "visual_type": "markdown",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Markdown 是用少量符号表达标题、列表、链接和代码等文档结构的纯文本格式。",
+                "why_it_matters": "它便于人和 AI 同时编辑、版本管理与转换，但展示前必须经过可信解析并限制危险 HTML。",
+                "implementation_steps": [
+                  "确定允许的 Markdown 语法和内容来源",
+                  "选择解析器并默认禁用原始 HTML",
+                  "为标题、代码、表格和链接定义展示样式",
+                  "处理空内容、超长代码和外部链接",
+                  "用恶意链接与脚本样例验证安全边界"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "react-markdown",
+                    "role": "在 React 中安全渲染 Markdown AST",
+                    "use_when": "内容需要嵌入现有 React 页面时"
+                  },
+                  {
+                    "name": "remark/rehype",
+                    "role": "组合解析、语法扩展和净化流程",
+                    "use_when": "需要目录、代码高亮或自定义节点时"
+                  },
+                  {
+                    "name": "marked + DOMPurify",
+                    "role": "快速解析并净化 HTML",
+                    "use_when": "非 React 项目或已有 HTML 渲染管线时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Markdown 内容」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确定允许的 Markdown 语法和内容来源；选择解析器并默认禁用原始 HTML；为标题、代码、表格和链接定义展示样式；处理空内容、超长代码和外部链接；用恶意链接与脚本样例验证安全边界。\n工具选择：优先使用 react-markdown，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：常用语法正确渲染，原始脚本无法执行，长代码可滚动，链接策略符合产品要求"
+              }
+            },
+            {
+              "id": 5,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "HTML",
+              "name_en": "",
+              "description": "AI 写出来的代码里一堆 < > 和英文单词，这些东西是干嘛的？",
+              "visual_type": "html",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "HTML 用语义化元素描述网页内容的结构和关系。",
+                "why_it_matters": "正确结构帮助浏览器、搜索引擎和辅助技术理解页面，也让 CSS 与交互代码更稳定。",
+                "implementation_steps": [
+                  "按标题层级、地标和内容关系设计结构",
+                  "优先使用 button、a、nav、main、form 等原生元素",
+                  "只在没有合适语义元素时使用 div",
+                  "为表单建立 label 与错误关联",
+                  "用浏览器无障碍树检查结构"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生语义 HTML",
+                    "role": "提供浏览器内建行为和无障碍基础",
+                    "use_when": "所有 Web 页面"
+                  },
+                  {
+                    "name": "MDN",
+                    "role": "核对元素语义和兼容性",
+                    "use_when": "不确定元素用途时"
+                  },
+                  {
+                    "name": "axe DevTools",
+                    "role": "发现结构和可访问性问题",
+                    "use_when": "验收页面时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「HTML 页面结构」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：按标题层级、地标和内容关系设计结构；优先使用 button、a、nav、main、form 等原生元素；只在没有合适语义元素时使用 div；为表单建立 label 与错误关联；用浏览器无障碍树检查结构。\n工具选择：优先使用 原生语义 HTML，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：页面无 CSS 时仍有合理阅读顺序，标题不跳级，交互元素可用键盘操作"
+              }
+            },
+            {
+              "id": 6,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "CSS",
+              "name_en": "",
+              "description": "按钮能点但颜色一直是灰色，帮我找出是哪条样式把主题色覆盖了。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "CSS 定义界面的布局、颜色、字体、响应式和交互视觉状态。",
+                "why_it_matters": "集中使用语义化样式和设计令牌可以控制一致性，减少覆盖冲突和散落的魔法值。",
+                "implementation_steps": [
+                  "提取颜色、间距、字号和圆角令牌",
+                  "按页面布局、组件和状态组织样式边界",
+                  "使用 Grid 或 Flex 建立稳定响应式约束",
+                  "补齐 hover、focus-visible、disabled 和错误状态",
+                  "扫描高优先级选择器与无效覆盖"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "项目现有 CSS 架构",
+                    "role": "延续令牌与选择器习惯",
+                    "use_when": "已有稳定样式体系时"
+                  },
+                  {
+                    "name": "CSS Modules",
+                    "role": "隔离组件样式",
+                    "use_when": "需要局部作用域且不使用原子类时"
+                  },
+                  {
+                    "name": "Tailwind CSS",
+                    "role": "用受控原子类快速组合样式",
+                    "use_when": "项目已采用 Tailwind 或团队接受其约束时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「CSS 样式系统」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：提取颜色、间距、字号和圆角令牌；按页面布局、组件和状态组织样式边界；使用 Grid 或 Flex 建立稳定响应式约束；补齐 hover、focus-visible、disabled 和错误状态；扫描高优先级选择器与无效覆盖。\n工具选择：优先使用 项目现有 CSS 架构，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：主流断点无重叠和横向滚动，交互状态清晰，新增样式不依赖 !important 争夺优先级"
+              }
+            },
+            {
+              "id": 7,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "文档对象模型",
+              "name_en": "DOM",
+              "description": "确认运行时页面到底插入了什么节点。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 6,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "DOM 是浏览器根据 HTML 构建的运行时节点树，脚本通过它读取和改变页面。",
+                "why_it_matters": "理解 DOM 能区分源码、React 虚拟树和浏览器最终结果，定位节点缺失、属性错误和事件失效。",
+                "implementation_steps": [
+                  "在浏览器中定位目标元素并检查最终属性",
+                  "确认节点由服务端、客户端还是第三方脚本创建",
+                  "检查事件目标、焦点和隐藏状态",
+                  "避免直接修改由框架管理的节点",
+                  "用可见 DOM 和无障碍树复核结果"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "浏览器开发者工具",
+                    "role": "检查运行时节点、样式和事件",
+                    "use_when": "调试所有网页时"
+                  },
+                  {
+                    "name": "Playwright locator",
+                    "role": "以用户可见语义定位并测试节点",
+                    "use_when": "需要自动化验证时"
+                  },
+                  {
+                    "name": "MutationObserver",
+                    "role": "监听外部或延迟节点变化",
+                    "use_when": "确实需要响应 DOM 结构变化时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「DOM 调试」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：在浏览器中定位目标元素并检查最终属性；确认节点由服务端、客户端还是第三方脚本创建；检查事件目标、焦点和隐藏状态；避免直接修改由框架管理的节点；用可见 DOM 和无障碍树复核结果。\n工具选择：优先使用 浏览器开发者工具，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：能解释节点从何而来、何时变化，修复后框架渲染与浏览器结果一致且没有直接修改冲突"
+              }
+            },
+            {
+              "id": 8,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "页面标题",
+              "name_en": "Title Tag",
+              "description": "让浏览器标签显示正确的页面名称。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 7,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "页面标题是 document title，显示在浏览器标签、历史记录和搜索结果标题中。",
+                "why_it_matters": "准确且唯一的标题帮助用户区分页面，也直接影响搜索结果可读性和分享识别。",
+                "implementation_steps": [
+                  "为每个可索引页面定义唯一标题",
+                  "使用页面主题加品牌名的稳定格式",
+                  "在 SPA 路由变化时同步更新标题",
+                  "为错误和不存在页面设置明确标题",
+                  "检查前进后退后的标题"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "框架元数据 API",
+                    "role": "按路由生成标题",
+                    "use_when": "Next.js 等支持服务端元数据时"
+                  },
+                  {
+                    "name": "document.title",
+                    "role": "在简单 SPA 中更新标题",
+                    "use_when": "没有路由元数据层时"
+                  },
+                  {
+                    "name": "React Helmet Async",
+                    "role": "集中管理客户端 head",
+                    "use_when": "SPA 需要多项 head 管理时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「页面标题」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：为每个可索引页面定义唯一标题；使用页面主题加品牌名的稳定格式；在 SPA 路由变化时同步更新标题；为错误和不存在页面设置明确标题；检查前进后退后的标题。\n工具选择：优先使用 框架元数据 API，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：每个详情页标题唯一，路由切换和返回后正确，不出现默认 Prototype 或空标题"
+              }
+            },
+            {
+              "id": 9,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "页面元数据",
+              "name_en": "Page Metadata",
+              "description": "检查搜索摘要和链接分享会显示什么。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 8,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "页面元数据是放在 head 中描述页面语言、摘要、索引策略和分享信息的数据。",
+                "why_it_matters": "它决定搜索引擎、浏览器和社交平台如何理解页面，错误继承会让不同页面显示同一摘要。",
+                "implementation_steps": [
+                  "列出 title、description、canonical、robots 和社交字段",
+                  "按页面真实内容生成，不使用空泛模板",
+                  "为详情页处理缺失图片和不可索引状态",
+                  "避免信任未经校验的转发域名",
+                  "用页面源码和平台调试器验证"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "框架 Metadata API",
+                    "role": "服务端生成可抓取元数据",
+                    "use_when": "支持 SSR 或 SSG 的框架"
+                  },
+                  {
+                    "name": "React Helmet Async",
+                    "role": "管理客户端 head",
+                    "use_when": "纯 SPA 且接受抓取限制时"
+                  },
+                  {
+                    "name": "Schema.org JSON-LD",
+                    "role": "补充结构化语义",
+                    "use_when": "页面类型有对应规范时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「页面元数据」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：列出 title、description、canonical、robots 和社交字段；按页面真实内容生成，不使用空泛模板；为详情页处理缺失图片和不可索引状态；避免信任未经校验的转发域名；用页面源码和平台调试器验证。\n工具选择：优先使用 框架 Metadata API，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：源码中的摘要与当前页面一致，canonical 正确，不存在跨页面继承错误"
+              }
+            },
+            {
+              "id": 10,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "网站图标",
+              "name_en": "Favicon",
+              "description": "换掉标签页和书签里的品牌小图标。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 9,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "网站图标是浏览器标签、书签、桌面快捷方式和安装入口使用的品牌小图。",
+                "why_it_matters": "它让站点在多标签和设备入口中保持可识别，错误尺寸或缓存会导致旧品牌长期残留。",
+                "implementation_steps": [
+                  "准备简洁且小尺寸可辨识的品牌图形",
+                  "输出 favicon.ico 和常用 PNG 尺寸",
+                  "在 head 和 manifest 中引用正确路径",
+                  "设置合适缓存并在换标时更新文件名或版本",
+                  "在浅色、深色和移动设备检查"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "RealFaviconGenerator",
+                    "role": "生成并检查多平台图标集合",
+                    "use_when": "需要覆盖多浏览器与设备时"
+                  },
+                  {
+                    "name": "ImageMagick",
+                    "role": "批量转换尺寸和格式",
+                    "use_when": "已有高质量源图时"
+                  },
+                  {
+                    "name": "框架静态资源约定",
+                    "role": "自动输出图标链接",
+                    "use_when": "Next.js 等项目时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「网站图标」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：准备简洁且小尺寸可辨识的品牌图形；输出 favicon.ico 和常用 PNG 尺寸；在 head 和 manifest 中引用正确路径；设置合适缓存并在换标时更新文件名或版本；在浅色、深色和移动设备检查。\n工具选择：优先使用 RealFaviconGenerator，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：标签页、书签和安装入口显示新品牌，网络请求无 404，小尺寸仍可识别"
+              }
+            },
+            {
+              "id": 11,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "Open Graph",
+              "name_en": "",
+              "description": "为文章设置正确的分享卡片信息。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 10,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Open Graph 是控制链接在社交平台中显示标题、摘要和预览图的一组元标签。",
+                "why_it_matters": "正确的分享卡片能让用户在打开前理解内容，并避免所有详情页复用同一张无关图片。",
+                "implementation_steps": [
+                  "为站点和详情页定义真实标题与摘要",
+                  "准备 1200x630 左右且文字可读的预览图",
+                  "输出绝对 HTTPS 图片地址",
+                  "详情页优先使用条目相关图片，无图时明确降级",
+                  "使用平台调试器刷新缓存"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "框架 Metadata API",
+                    "role": "按页面输出 OG 与 X 标签",
+                    "use_when": "支持服务端元数据时"
+                  },
+                  {
+                    "name": "Satori / @vercel/og",
+                    "role": "按数据生成预览图",
+                    "use_when": "大量详情页需要一致模板时"
+                  },
+                  {
+                    "name": "平台分享调试器",
+                    "role": "查看抓取与缓存结果",
+                    "use_when": "发布后验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Open Graph 分享卡片」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：为站点和详情页定义真实标题与摘要；准备 1200x630 左右且文字可读的预览图；输出绝对 HTTPS 图片地址；详情页优先使用条目相关图片，无图时明确降级；使用平台调试器刷新缓存。\n工具选择：优先使用 框架 Metadata API，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：分享链接显示正确标题、摘要和可加载图片，不同详情页不会串图"
+              }
+            },
+            {
+              "id": 12,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "Web 应用清单",
+              "name_en": "Web App Manifest",
+              "description": "检查应用名称、图标、启动地址和显示方式。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 11,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Web App Manifest 是描述可安装 Web 应用名称、图标、启动地址和显示模式的 JSON 文件。",
+                "why_it_matters": "它让浏览器把网站作为应用安装，并控制启动后的品牌和窗口体验。",
+                "implementation_steps": [
+                  "定义 name、short_name、start_url、display 和 theme_color",
+                  "提供 maskable 与普通图标",
+                  "确保 start_url 在部署路径下有效",
+                  "关联 manifest 并设置正确 MIME 类型",
+                  "在移动设备执行安装与离线启动检查"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "vite-plugin-pwa",
+                    "role": "为 Vite 项目生成 manifest 与 Service Worker",
+                    "use_when": "需要完整 PWA 能力时"
+                  },
+                  {
+                    "name": "原生 manifest.webmanifest",
+                    "role": "只需要安装元数据",
+                    "use_when": "不需要离线缓存时"
+                  },
+                  {
+                    "name": "Chrome DevTools Application",
+                    "role": "检查清单和安装条件",
+                    "use_when": "开发与验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Web 应用清单」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义 name、short_name、start_url、display 和 theme_color；提供 maskable 与普通图标；确保 start_url 在部署路径下有效；关联 manifest 并设置正确 MIME 类型；在移动设备执行安装与离线启动检查。\n工具选择：优先使用 vite-plugin-pwa，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：浏览器不报告 manifest 错误，安装后名称、图标和启动页面正确"
+              }
+            },
+            {
+              "id": 13,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "撤销",
+              "name_en": "Undo",
+              "description": "这个改动不对，回到动手之前的样子。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 12,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "撤销让用户按相反顺序恢复最近一次可逆操作。",
+                "why_it_matters": "它降低误操作成本并鼓励探索，但必须明确哪些操作可撤销以及历史何时失效。",
+                "implementation_steps": [
+                  "定义可撤销命令及其反向操作",
+                  "保存最小必要快照或命令参数",
+                  "设置历史长度和跨页面生命周期",
+                  "合并连续输入等高频操作",
+                  "处理服务端已提交操作的补偿或禁止撤销"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Command Pattern",
+                    "role": "封装执行与撤销逻辑",
+                    "use_when": "操作类型明确且需要历史栈时"
+                  },
+                  {
+                    "name": "useReducer",
+                    "role": "管理局部编辑历史",
+                    "use_when": "React 内轻量状态编辑时"
+                  },
+                  {
+                    "name": "Yjs",
+                    "role": "提供协作编辑与共享历史基础",
+                    "use_when": "多人实时编辑时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「撤销能力」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义可撤销命令及其反向操作；保存最小必要快照或命令参数；设置历史长度和跨页面生命周期；合并连续输入等高频操作；处理服务端已提交操作的补偿或禁止撤销。\n工具选择：优先使用 Command Pattern，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：连续执行和撤销顺序正确，边界有明确提示，刷新或服务端提交后的行为符合定义"
+              }
+            },
+            {
+              "id": 14,
+              "category_id": 1,
+              "group_id": 1,
+              "name_zh": "无障碍",
+              "name_en": "Accessibility",
+              "description": "检查图片说明、键盘操作和文字对比度。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 13,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "无障碍让不同视觉、听觉、运动和认知能力的用户都能完成核心任务。",
+                "why_it_matters": "它改善键盘、语义和对比度质量，也通常提升自动化测试与搜索理解。",
+                "implementation_steps": [
+                  "使用语义化元素并保持合理标题层级",
+                  "确保键盘可达、焦点可见且顺序正确",
+                  "为表单错误、图像和动态图标提供可理解名称",
+                  "校验文字与控件对比度",
+                  "用自动扫描加键盘和读屏人工检查"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "axe-core / axe DevTools",
+                    "role": "自动发现常见问题",
+                    "use_when": "开发和 CI 扫描时"
+                  },
+                  {
+                    "name": "Playwright accessibility assertions",
+                    "role": "把关键无障碍行为加入回归测试",
+                    "use_when": "已有端到端测试时"
+                  },
+                  {
+                    "name": "VoiceOver",
+                    "role": "验证真实读屏顺序与名称",
+                    "use_when": "macOS/iOS 人工验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「无障碍支持」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：使用语义化元素并保持合理标题层级；确保键盘可达、焦点可见且顺序正确；为表单错误、图像和动态图标提供可理解名称；校验文字与控件对比度；用自动扫描加键盘和读屏人工检查。\n工具选择：优先使用 axe-core / axe DevTools，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：核心流程只用键盘可完成，焦点不丢失，表单错误可被读屏识别，关键对比度达 WCAG AA"
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "category_id": 1,
+          "name": "按钮与链接",
+          "sort_order": 1,
+          "terms": [
+            {
+              "id": 15,
+              "category_id": 1,
+              "group_id": 2,
+              "name_zh": "按钮",
+              "name_en": "Button",
+              "description": "帮我加个按钮，点了就能把内容存下来。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "按钮触发当前界面中的命令，例如保存、提交、删除或打开弹窗。",
+                "why_it_matters": "正确按钮语义自带键盘行为和禁用状态，避免把链接或 div 伪装成命令。",
+                "implementation_steps": [
+                  "用动词命名按钮并确定主次层级",
+                  "使用原生 button 和正确 type",
+                  "实现 hover、focus-visible、active、disabled 和 loading",
+                  "提交时防止重复触发",
+                  "危险操作提供与风险匹配的确认"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "项目现有组件与 CSS",
+                    "role": "保持视觉和交互一致，避免重复依赖",
+                    "use_when": "仓库已经有明确设计语言时"
+                  },
+                  {
+                    "name": "Radix UI / shadcn/ui",
+                    "role": "提供可访问的无样式或可拥有源码的交互原语",
+                    "use_when": "需要弹窗、菜单、标签页等复杂交互且项目允许引入依赖时"
+                  },
+                  {
+                    "name": "Ant Design",
+                    "role": "快速搭建高密度管理界面",
+                    "use_when": "目标是后台系统且接受统一视觉语言时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「按钮交互」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：用动词命名按钮并确定主次层级；使用原生 button 和正确 type；实现 hover、focus-visible、active、disabled 和 loading；提交时防止重复触发；危险操作提供与风险匹配的确认。\n工具选择：优先使用 项目现有组件与 CSS，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：鼠标和键盘均可触发，加载时不可重复提交，禁用状态有语义且文字对比达标"
+              }
+            },
+            {
+              "id": 16,
+              "category_id": 1,
+              "group_id": 2,
+              "name_zh": "链接",
+              "name_en": "Link",
+              "description": "这段文字要能让人点，点了跳到另一个页面。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "链接把用户导航到另一个地址、页面状态或当前页锚点。",
+                "why_it_matters": "正确链接支持新窗口、复制地址、前进后退和辅助技术，不应使用按钮模拟导航。",
+                "implementation_steps": [
+                  "确认目标是导航而不是命令",
+                  "使用真实 href 并提供可理解链接文本",
+                  "外部新窗口链接添加安全属性和提示",
+                  "保持访问、焦点和当前状态样式",
+                  "验证直接访问与浏览器前进后退"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 a 元素",
+                    "role": "提供标准导航行为",
+                    "use_when": "普通链接和下载"
+                  },
+                  {
+                    "name": "框架 Link",
+                    "role": "客户端路由预取与无刷新导航",
+                    "use_when": "使用 React Router 或 Next.js 时"
+                  },
+                  {
+                    "name": "URL API",
+                    "role": "安全构造查询和相对地址",
+                    "use_when": "链接包含动态参数时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「链接导航」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认目标是导航而不是命令；使用真实 href 并提供可理解链接文本；外部新窗口链接添加安全属性和提示；保持访问、焦点和当前状态样式；验证直接访问与浏览器前进后退。\n工具选择：优先使用 原生 a 元素，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：链接可复制和新窗口打开，目标准确，键盘焦点清晰，返回后页面状态合理"
+              }
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "category_id": 1,
+          "name": "表单",
+          "sort_order": 2,
+          "terms": [
+            {
+              "id": 17,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "输入框",
+              "name_en": "Input",
+              "description": "页面上要有个填邮箱的地方。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "输入框收集一行短文本、邮箱、数字或搜索关键词。",
+                "why_it_matters": "明确类型、标签和校验能减少错误输入，并支持浏览器自动填充和移动键盘。",
+                "implementation_steps": [
+                  "选择正确 input type 与 autocomplete",
+                  "绑定可见 label，不用 placeholder 替代标签",
+                  "在提交或合理时机校验并关联错误",
+                  "保留用户输入直到成功提交",
+                  "处理只读、禁用、加载和清空操作"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 input",
+                    "role": "获得输入类型和自动填充能力",
+                    "use_when": "绝大多数简单字段"
+                  },
+                  {
+                    "name": "React Hook Form",
+                    "role": "减少大型表单重渲染并统一校验",
+                    "use_when": "字段较多或动态表单时"
+                  },
+                  {
+                    "name": "Zod",
+                    "role": "共享数据结构和校验规则",
+                    "use_when": "前后端使用 TypeScript 时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「输入框」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：选择正确 input type 与 autocomplete；绑定可见 label，不用 placeholder 替代标签；在提交或合理时机校验并关联错误；保留用户输入直到成功提交；处理只读、禁用、加载和清空操作。\n工具选择：优先使用 原生 input，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：标签、类型和自动填充正确，错误与字段关联，移动端键盘匹配输入类型"
+              }
+            },
+            {
+              "id": 18,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "多行文本框",
+              "name_en": "Textarea",
+              "description": "要让用户写一大段话，一行肯定不够。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "多行文本框用于收集评论、描述和长内容。",
+                "why_it_matters": "它需要处理长度、换行、自动扩展和草稿保留，不能沿用单行输入的空间与校验假设。",
+                "implementation_steps": [
+                  "定义长度限制和计数反馈",
+                  "设置合理初始行数与最大高度",
+                  "保留换行并按后端格式提交",
+                  "必要时实现自动扩展但避免页面跳动",
+                  "对长文本、粘贴和输入法进行测试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 textarea",
+                    "role": "稳定处理多行纯文本",
+                    "use_when": "不需要富文本格式时"
+                  },
+                  {
+                    "name": "React Hook Form",
+                    "role": "管理校验和提交状态",
+                    "use_when": "处于复杂表单中时"
+                  },
+                  {
+                    "name": "TipTap",
+                    "role": "提供结构化富文本编辑",
+                    "use_when": "确实需要格式、链接或协作时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「多行文本框」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义长度限制和计数反馈；设置合理初始行数与最大高度；保留换行并按后端格式提交；必要时实现自动扩展但避免页面跳动；对长文本、粘贴和输入法进行测试。\n工具选择：优先使用 原生 textarea，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：长文本可编辑且不破坏布局，换行保存一致，限制和错误反馈清楚"
+              }
+            },
+            {
+              "id": 19,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "复选框",
+              "name_en": "Checkbox",
+              "description": "这几个选项不冲突，用户想选几个都行。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "复选框表示一个独立布尔值或可同时选择多个选项。",
+                "why_it_matters": "它与单选和开关的语义不同，正确分组能让用户理解多个选择互不排斥。",
+                "implementation_steps": [
+                  "用 fieldset 和 legend 描述选项组",
+                  "每项使用 checkbox 与关联 label",
+                  "数组状态按值增删而不是保存显示文本",
+                  "支持全选时处理半选状态",
+                  "提交前验证最少或最多选择规则"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 checkbox",
+                    "role": "提供键盘与选中语义",
+                    "use_when": "普通布尔或多选场景"
+                  },
+                  {
+                    "name": "Radix Checkbox",
+                    "role": "统一复杂视觉与 indeterminate 状态",
+                    "use_when": "自定义设计且需要可靠无障碍时"
+                  },
+                  {
+                    "name": "React Hook Form",
+                    "role": "管理选项数组和校验",
+                    "use_when": "表单字段较多时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「复选框组」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：用 fieldset 和 legend 描述选项组；每项使用 checkbox 与关联 label；数组状态按值增删而不是保存显示文本；支持全选时处理半选状态；提交前验证最少或最多选择规则。\n工具选择：优先使用 原生 checkbox，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：多个选项可独立选择，读屏能理解分组，半选和校验状态正确"
+              }
+            },
+            {
+              "id": 20,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "开关",
+              "name_en": "Switch",
+              "description": "像手机设置里那样，这个功能一拨就开、再拨就关。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "开关用于立即启用或关闭一个设置，改变通常即时生效。",
+                "why_it_matters": "它不应代替需要提交的复选框。即时反馈和失败回滚决定用户能否相信当前状态。",
+                "implementation_steps": [
+                  "确认切换后是否立即生效",
+                  "使用 switch 语义并提供明确标签",
+                  "乐观更新时保留旧值用于失败回滚",
+                  "请求中锁定或合并重复切换",
+                  "显示保存失败并恢复真实状态"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Radix Switch",
+                    "role": "提供可靠 switch 语义和键盘行为",
+                    "use_when": "React 自定义视觉开关"
+                  },
+                  {
+                    "name": "原生 checkbox + role switch",
+                    "role": "减少依赖",
+                    "use_when": "简单项目且能正确实现语义时"
+                  },
+                  {
+                    "name": "TanStack Query mutation",
+                    "role": "管理乐观更新与回滚",
+                    "use_when": "状态保存到服务端时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「开关设置」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认切换后是否立即生效；使用 switch 语义并提供明确标签；乐观更新时保留旧值用于失败回滚；请求中锁定或合并重复切换；显示保存失败并恢复真实状态。\n工具选择：优先使用 Radix Switch，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：切换后状态与服务端一致，失败会回滚并提示，键盘和读屏可操作"
+              }
+            },
+            {
+              "id": 21,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "日期选择器",
+              "name_en": "DatePicker",
+              "description": "日期别让用户手输，给个日历直接挑。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "日期选择器让用户按日历选择日期或范围，同时保留可输入和本地化能力。",
+                "why_it_matters": "日期涉及格式、时区、禁用范围和移动设备，手写日历容易产生大量边界错误。",
+                "implementation_steps": [
+                  "明确选择日期、时间还是日期范围",
+                  "确定业务时区与存储格式",
+                  "设置最小、最大和不可选日期",
+                  "支持键盘、输入和清空",
+                  "测试月底、闰年、夏令时和移动端"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "React Aria DatePicker",
+                    "role": "提供国际化和无障碍日期原语",
+                    "use_when": "需要高度定制且重视键盘体验时"
+                  },
+                  {
+                    "name": "MUI X Date Pickers",
+                    "role": "提供成熟完整控件",
+                    "use_when": "项目已使用 MUI 时"
+                  },
+                  {
+                    "name": "原生 input date",
+                    "role": "依赖最少且移动端体验好",
+                    "use_when": "视觉定制要求不高时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「日期选择」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：明确选择日期、时间还是日期范围；确定业务时区与存储格式；设置最小、最大和不可选日期；支持键盘、输入和清空；测试月底、闰年、夏令时和移动端。\n工具选择：优先使用 React Aria DatePicker，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：存储值与显示时区一致，限制日期不可选，键盘和移动端可完成选择"
+              }
+            },
+            {
+              "id": 22,
+              "category_id": 1,
+              "group_id": 3,
+              "name_zh": "上传",
+              "name_en": "Upload",
+              "description": "用户要能把自己的图片传上来。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "上传把本地文件传输到服务端或对象存储，并记录可访问的文件信息。",
+                "why_it_matters": "它涉及文件类型、大小、进度、权限和失败重试，不能只实现一个文件选择按钮。",
+                "implementation_steps": [
+                  "限制文件类型、数量和大小并在前后端重复校验",
+                  "选择直传对象存储或经应用服务器上传",
+                  "显示单文件进度、成功和失败状态",
+                  "使用随机对象键并保存原始文件名元数据",
+                  "处理取消、重试、删除和未完成上传"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "对象存储预签名上传",
+                    "role": "让客户端直接上传并减轻服务器压力",
+                    "use_when": "文件较大或并发较高时"
+                  },
+                  {
+                    "name": "Uppy",
+                    "role": "提供队列、进度和重试 UI",
+                    "use_when": "多文件或复杂上传时"
+                  },
+                  {
+                    "name": "原生 file input",
+                    "role": "保持简单",
+                    "use_when": "单文件且体积较小时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「文件上传」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：限制文件类型、数量和大小并在前后端重复校验；选择直传对象存储或经应用服务器上传；显示单文件进度、成功和失败状态；使用随机对象键并保存原始文件名元数据；处理取消、重试、删除和未完成上传。\n工具选择：优先使用 对象存储预签名上传，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：非法文件被拒绝，进度准确，失败可重试，上传结果受权限控制且不会覆盖同名文件"
+              }
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "category_id": 1,
+          "name": "内容展示",
+          "sort_order": 3,
+          "terms": [
+            {
+              "id": 23,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "表格",
+              "name_en": "Table",
+              "description": "订单数据堆在一起太乱了，帮我排成表格，一行一条。",
+              "visual_type": "table",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "表格用行和列展示可比较的结构化记录。",
+                "why_it_matters": "当用户需要扫描、排序和对比同类字段时，表格比卡片更高效，但必须处理窄屏和大量数据。",
+                "implementation_steps": [
+                  "确定主键、列含义和默认排序",
+                  "把主要信息放左侧并控制列数量",
+                  "实现加载、空、错误、排序和分页",
+                  "让行操作有明确名称与焦点",
+                  "移动端采用横向滚动或关键字段折叠"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "TanStack Table",
+                    "role": "提供无样式排序、筛选和分页逻辑",
+                    "use_when": "需要自有视觉和中等复杂度时"
+                  },
+                  {
+                    "name": "AG Grid",
+                    "role": "提供虚拟化和企业级表格能力",
+                    "use_when": "列多、数据量大、编辑复杂时"
+                  },
+                  {
+                    "name": "原生 table",
+                    "role": "语义清晰且依赖最少",
+                    "use_when": "静态或简单数据时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「数据表格」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确定主键、列含义和默认排序；把主要信息放左侧并控制列数量；实现加载、空、错误、排序和分页；让行操作有明确名称与焦点；移动端采用横向滚动或关键字段折叠。\n工具选择：优先使用 TanStack Table，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：标题和单元格语义正确，排序可理解，空和加载状态稳定，移动端仍能访问关键数据"
+              }
+            },
+            {
+              "id": 24,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "卡片",
+              "name_en": "Card",
+              "description": "每个商品做成一张小卡片，图在上面，名字价格在下面。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "卡片把一个可独立理解的对象及其主要操作组合在一个边界内。",
+                "why_it_matters": "它适合重复对象，不适合把所有页面区块都装盒。边界应该表达信息归属，而不是纯装饰。",
+                "implementation_steps": [
+                  "确认每张卡对应一个独立对象",
+                  "只保留帮助扫描的主要字段和一个主操作",
+                  "统一图片区、标题、元数据和操作位置",
+                  "避免整卡点击与内部按钮产生冲突",
+                  "为不同内容长度设置稳定约束"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "项目现有组件与 CSS",
+                    "role": "保持视觉和交互一致，避免重复依赖",
+                    "use_when": "仓库已经有明确设计语言时"
+                  },
+                  {
+                    "name": "Radix UI / shadcn/ui",
+                    "role": "提供可访问的无样式或可拥有源码的交互原语",
+                    "use_when": "需要弹窗、菜单、标签页等复杂交互且项目允许引入依赖时"
+                  },
+                  {
+                    "name": "Ant Design",
+                    "role": "快速搭建高密度管理界面",
+                    "use_when": "目标是后台系统且接受统一视觉语言时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「卡片组件」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认每张卡对应一个独立对象；只保留帮助扫描的主要字段和一个主操作；统一图片区、标题、元数据和操作位置；避免整卡点击与内部按钮产生冲突；为不同内容长度设置稳定约束。\n工具选择：优先使用 项目现有组件与 CSS，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：卡片边界代表真实对象，主操作明确，内容变化不导致布局跳动，嵌套交互不会误触"
+              }
+            },
+            {
+              "id": 25,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "标签页",
+              "name_en": "Tabs",
+              "description": "内容太多了，帮我分几个页签，点一下就换一屏。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "标签页在同一上下文中切换互斥内容面板。",
+                "why_it_matters": "它减少页面跳转，但只适用于少量同级内容，并需要正确的焦点、键盘和深链接策略。",
+                "implementation_steps": [
+                  "确认各面板同级且用户只需同时看一个",
+                  "设置稳定 tab id 与 panel 关联",
+                  "实现方向键切换和焦点管理",
+                  "决定选中状态是否写入 URL",
+                  "处理溢出、移动端和懒加载"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Radix Tabs",
+                    "role": "提供无障碍键盘和关联语义",
+                    "use_when": "React 自定义标签页"
+                  },
+                  {
+                    "name": "React Aria Tabs",
+                    "role": "适合复杂国际化与无障碍需求",
+                    "use_when": "需要高度定制时"
+                  },
+                  {
+                    "name": "路由导航",
+                    "role": "为每项提供独立页面和深链接",
+                    "use_when": "内容不是真正同一上下文时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「标签页」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认各面板同级且用户只需同时看一个；设置稳定 tab id 与 panel 关联；实现方向键切换和焦点管理；决定选中状态是否写入 URL；处理溢出、移动端和懒加载。\n工具选择：优先使用 Radix Tabs，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：键盘可切换且焦点正确，直接链接可恢复选中项，移动端标签不会遮挡"
+              }
+            },
+            {
+              "id": 26,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "空状态",
+              "name_en": "Empty",
+              "description": "没数据时别一片空白，告诉用户接下来怎么办。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "空状态解释为什么没有内容，并提供符合当前权限的下一步。",
+                "why_it_matters": "它把无数据从异常空白变成可行动状态，也能区分首次使用、筛选无结果和加载失败。",
+                "implementation_steps": [
+                  "区分首次为空、筛选为空和权限为空",
+                  "使用具体标题说明原因",
+                  "只提供一个最相关主操作",
+                  "保留必要上下文，不伪造示例数据",
+                  "验证没有权限时不展示不可执行操作"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "项目现有 EmptyState",
+                    "role": "保持产品语气和布局一致",
+                    "use_when": "已有共享空状态组件时"
+                  },
+                  {
+                    "name": "设计系统 Empty State",
+                    "role": "复用官方模式",
+                    "use_when": "项目使用 Carbon、Ant Design 等系统时"
+                  },
+                  {
+                    "name": "原生语义结构",
+                    "role": "减少组件复杂度",
+                    "use_when": "简单页面时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「空状态」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：区分首次为空、筛选为空和权限为空；使用具体标题说明原因；只提供一个最相关主操作；保留必要上下文，不伪造示例数据；验证没有权限时不展示不可执行操作。\n工具选择：优先使用 项目现有 EmptyState，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：不同空原因显示不同文案，主操作可执行，读屏能按合理顺序理解"
+              }
+            },
+            {
+              "id": 27,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "图表",
+              "name_en": "Chart",
+              "description": "用图表比较这六个月的订单变化。",
+              "visual_type": "chart",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "图表把数值关系编码为位置、长度、颜色或形状，帮助识别趋势和比较。",
+                "why_it_matters": "选择错误图形会误导判断。图表还必须提供单位、数据来源和无障碍替代。",
+                "implementation_steps": [
+                  "先明确要比较、看趋势、看构成还是看分布",
+                  "选择与任务匹配的最简单图形",
+                  "标注单位、时间范围和缺失值",
+                  "提供 tooltip 与键盘或表格替代",
+                  "测试零值、极值、长标签和窄屏"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "ECharts",
+                    "role": "覆盖常见图表与大数据交互",
+                    "use_when": "业务图表类型多时"
+                  },
+                  {
+                    "name": "Recharts",
+                    "role": "以 React 组件组合基础图表",
+                    "use_when": "React 项目且图表简单时"
+                  },
+                  {
+                    "name": "D3",
+                    "role": "精确控制可视编码和复杂交互",
+                    "use_when": "标准图库无法表达需求时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「数据图表」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：先明确要比较、看趋势、看构成还是看分布；选择与任务匹配的最简单图形；标注单位、时间范围和缺失值；提供 tooltip 与键盘或表格替代；测试零值、极值、长标签和窄屏。\n工具选择：优先使用 ECharts，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：图形回答明确问题，单位和范围完整，极端数据不失真，并提供可访问的数据替代"
+              }
+            },
+            {
+              "id": 28,
+              "category_id": 1,
+              "group_id": 4,
+              "name_zh": "聊天界面",
+              "name_en": "Chat UI",
+              "description": "补全消息列表、输入区、发送中和失败重试。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "聊天界面组织消息历史、输入、发送状态、流式回复和失败恢复。",
+                "why_it_matters": "真实聊天不是静态气泡列表，需要稳定滚动、消息身份、并发控制和长内容渲染。",
+                "implementation_steps": [
+                  "定义消息 id、角色、内容、状态和时间",
+                  "实现发送中、流式、失败和重试状态",
+                  "只在用户位于底部时自动滚动",
+                  "隔离 Markdown 或代码渲染的安全边界",
+                  "处理停止生成、重新发送和断线恢复"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Vercel AI SDK",
+                    "role": "管理流式消息和模型响应",
+                    "use_when": "React/Next.js AI 聊天时"
+                  },
+                  {
+                    "name": "react-markdown",
+                    "role": "安全展示模型 Markdown",
+                    "use_when": "回复包含结构化文本时"
+                  },
+                  {
+                    "name": "虚拟列表",
+                    "role": "控制长会话 DOM 成本",
+                    "use_when": "消息数量很大时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「聊天界面」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义消息 id、角色、内容、状态和时间；实现发送中、流式、失败和重试状态；只在用户位于底部时自动滚动；隔离 Markdown 或代码渲染的安全边界；处理停止生成、重新发送和断线恢复。\n工具选择：优先使用 Vercel AI SDK，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：流式过程不重复消息，滚动不抢夺用户位置，失败可恢复，长代码和移动端输入可用"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "backend",
+      "label": "后端",
+      "title": "后端 VibeCoding 术语",
+      "sort_order": 1,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 6,
+      "groups": [
+        {
+          "id": 5,
+          "category_id": 2,
+          "name": "接口与数据",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 29,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "接口",
+              "name_en": "API",
+              "description": "让前端通过一个稳定地址读取订单数据。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "API 是系统之间约定请求地址、参数、权限、响应和错误的契约。",
+                "why_it_matters": "稳定契约让前后端可以独立演进，明确错误状态能避免客户端把所有失败都当成网络问题。",
+                "implementation_steps": [
+                  "定义资源、动作和 URL 语义",
+                  "写清请求参数、响应结构和状态码",
+                  "在服务端校验输入并统一错误格式",
+                  "加入身份验证、授权和速率限制",
+                  "用契约测试覆盖成功与典型失败"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "OpenAPI",
+                    "role": "描述并生成可验证接口契约",
+                    "use_when": "REST API 需要多团队协作时"
+                  },
+                  {
+                    "name": "Zod",
+                    "role": "运行时校验输入输出",
+                    "use_when": "TypeScript 服务时"
+                  },
+                  {
+                    "name": "Postman / Bruno",
+                    "role": "保存可复用请求和环境",
+                    "use_when": "联调与人工验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「API 接口」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义资源、动作和 URL 语义；写清请求参数、响应结构和状态码；在服务端校验输入并统一错误格式；加入身份验证、授权和速率限制；用契约测试覆盖成功与典型失败。\n工具选择：优先使用 OpenAPI，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：文档与实际响应一致，非法输入返回可理解 4xx，未授权不能访问，错误不泄露内部堆栈"
+              }
+            },
+            {
+              "id": 30,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "数据库",
+              "name_en": "Database",
+              "description": "把用户资料持久保存，下次打开仍然能找到。",
+              "visual_type": "table",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "数据库持久保存结构化数据，并提供查询、约束和事务能力。",
+                "why_it_matters": "良好模型通过主键、外键和唯一约束保护数据，比依赖每个调用方自觉更可靠。",
+                "implementation_steps": [
+                  "从业务实体和关系设计表结构",
+                  "定义主键、外键、唯一性和非空约束",
+                  "为真实查询建立必要索引",
+                  "用事务保护多步写入",
+                  "编写可回滚或可恢复的增量迁移"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "SQLite / D1",
+                    "role": "低运维成本的关系型存储",
+                    "use_when": "单机应用、边缘应用或中小数据量"
+                  },
+                  {
+                    "name": "PostgreSQL",
+                    "role": "成熟事务与扩展能力",
+                    "use_when": "多用户生产系统和复杂查询"
+                  },
+                  {
+                    "name": "Drizzle ORM",
+                    "role": "类型化 schema 与迁移",
+                    "use_when": "TypeScript 项目需要轻量 ORM 时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「数据库模型」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：从业务实体和关系设计表结构；定义主键、外键、唯一性和非空约束；为真实查询建立必要索引；用事务保护多步写入；编写可回滚或可恢复的增量迁移。\n工具选择：优先使用 SQLite / D1，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：约束能阻止无效数据，核心查询有索引，迁移保留旧数据，多步写入不会留下半成品"
+              }
+            },
+            {
+              "id": 31,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "身份验证",
+              "name_en": "Authentication",
+              "description": "登录后确认这个请求到底是谁发来的。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "身份验证确认请求者是谁，授权再决定其能做什么。",
+                "why_it_matters": "把两者分开可以避免登录用户自动获得全部权限，并保护管理端和个人数据。",
+                "implementation_steps": [
+                  "选择会话 Cookie 或短期令牌策略",
+                  "安全存储密码哈希或接入可信身份提供方",
+                  "在服务端每个受保护入口验证身份与权限",
+                  "设置过期、注销、CSRF 和暴力破解防护",
+                  "记录安全事件但不记录密码和令牌"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "HttpOnly 会话 Cookie",
+                    "role": "降低浏览器令牌泄漏风险",
+                    "use_when": "同源 Web 应用"
+                  },
+                  {
+                    "name": "Auth.js",
+                    "role": "集成常见身份提供方与会话",
+                    "use_when": "Next.js 应用"
+                  },
+                  {
+                    "name": "外部 OIDC 服务",
+                    "role": "集中管理企业身份与 MFA",
+                    "use_when": "组织级应用"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「身份验证与授权」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：选择会话 Cookie 或短期令牌策略；安全存储密码哈希或接入可信身份提供方；在服务端每个受保护入口验证身份与权限；设置过期、注销、CSRF 和暴力破解防护；记录安全事件但不记录密码和令牌。\n工具选择：优先使用 HttpOnly 会话 Cookie，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：未登录和无权限请求被服务端拒绝，会话可过期和注销，Cookie 属性符合生产环境"
+              }
+            },
+            {
+              "id": 32,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "缓存",
+              "name_en": "Cache",
+              "description": "重复数据先从更快的地方读取，减少等待。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "缓存保存可重复计算或读取的结果，以更低成本快速返回。",
+                "why_it_matters": "它能改善延迟和容量，但必须定义键、有效期和失效，否则用户会看到错误旧数据。",
+                "implementation_steps": [
+                  "测量并确认真正的慢路径",
+                  "设计包含权限和变化维度的缓存键",
+                  "设置 TTL 与主动失效策略",
+                  "防止缓存击穿和雪崩",
+                  "监控命中率、陈旧时间和回源失败"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "HTTP Cache-Control",
+                    "role": "利用浏览器和 CDN 缓存公开响应",
+                    "use_when": "内容可按 URL 和版本缓存时"
+                  },
+                  {
+                    "name": "Redis",
+                    "role": "共享缓存、计数和锁",
+                    "use_when": "多实例服务需要一致缓存时"
+                  },
+                  {
+                    "name": "进程内 LRU",
+                    "role": "极低延迟且实现简单",
+                    "use_when": "单实例且允许重启丢失时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「缓存策略」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：测量并确认真正的慢路径；设计包含权限和变化维度的缓存键；设置 TTL 与主动失效策略；防止缓存击穿和雪崩；监控命中率、陈旧时间和回源失败。\n工具选择：优先使用 HTTP Cache-Control，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：命中时结果正确，数据更新后按预期失效，权限不同的用户不会共享私有缓存"
+              }
+            },
+            {
+              "id": 33,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "队列",
+              "name_en": "Queue",
+              "description": "耗时任务先排队处理，不要堵住当前请求。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "队列把耗时或可延迟任务保存下来，由后台工作进程异步处理。",
+                "why_it_matters": "它让当前请求快速返回，并通过重试、并发和死信机制隔离不稳定任务。",
+                "implementation_steps": [
+                  "定义任务载荷、唯一标识和幂等键",
+                  "生产者只入队必要数据",
+                  "消费者设置并发、超时和退避重试",
+                  "区分可重试与永久失败",
+                  "建立死信查看、补偿和告警"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Cloudflare Queues",
+                    "role": "边缘环境托管队列",
+                    "use_when": "站点部署在 Cloudflare Workers 时"
+                  },
+                  {
+                    "name": "BullMQ + Redis",
+                    "role": "Node.js 中成熟的任务队列",
+                    "use_when": "已有 Redis 基础设施时"
+                  },
+                  {
+                    "name": "数据库任务表",
+                    "role": "减少基础设施",
+                    "use_when": "任务量小且可以轮询处理时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「异步任务队列」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义任务载荷、唯一标识和幂等键；生产者只入队必要数据；消费者设置并发、超时和退避重试；区分可重试与永久失败；建立死信查看、补偿和告警。\n工具选择：优先使用 Cloudflare Queues，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：请求能快速返回，重复投递不产生重复副作用，失败按策略重试并可追踪"
+              }
+            },
+            {
+              "id": 34,
+              "category_id": 2,
+              "group_id": 5,
+              "name_zh": "日志",
+              "name_en": "Log",
+              "description": "记录运行过程，出错时能找到发生了什么。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "日志是带时间、级别和上下文的运行事件记录。",
+                "why_it_matters": "结构化日志能把一次请求跨服务串起来，帮助定位错误，同时必须避免泄露隐私和密钥。",
+                "implementation_steps": [
+                  "定义 debug、info、warn、error 使用边界",
+                  "输出 JSON 并加入 request_id 和关键资源 id",
+                  "在入口生成关联标识并向下传递",
+                  "过滤密码、令牌、Cookie 和敏感正文",
+                  "设置采样、保留期和错误告警"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Pino",
+                    "role": "高性能 Node.js 结构化日志",
+                    "use_when": "Node 服务"
+                  },
+                  {
+                    "name": "OpenTelemetry",
+                    "role": "统一日志、指标和链路上下文",
+                    "use_when": "多服务可观测性"
+                  },
+                  {
+                    "name": "托管日志平台",
+                    "role": "检索、保留和告警",
+                    "use_when": "生产环境集中运维"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「结构化日志」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义 debug、info、warn、error 使用边界；输出 JSON 并加入 request_id 和关键资源 id；在入口生成关联标识并向下传递；过滤密码、令牌、Cookie 和敏感正文；设置采样、保留期和错误告警。\n工具选择：优先使用 Pino，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：一次请求可通过 request_id 追踪，错误包含足够上下文，日志中不存在密码、令牌或敏感数据"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "product",
+      "label": "产品",
+      "title": "产品 VibeCoding 术语",
+      "sort_order": 2,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 8,
+      "groups": [
+        {
+          "id": 6,
+          "category_id": 3,
+          "name": "用户与需求",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 35,
+              "category_id": 3,
+              "group_id": 6,
+              "name_zh": "用户故事",
+              "name_en": "User Story",
+              "description": "写清楚是谁遇到了什么问题，解决以后有什么用。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "用户故事用角色、需求和价值描述一个可交付目标。",
+                "why_it_matters": "它保持团队关注用户结果，而不是提前锁死技术方案，并为验收场景提供入口。",
+                "implementation_steps": [
+                  "明确具体用户角色而非所有用户",
+                  "写出想完成的动作和业务价值",
+                  "补充可验证的验收条件",
+                  "拆分过大或包含多个结果的故事",
+                  "与真实用户反馈或数据核对优先级"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Markdown 模板",
+                    "role": "便于版本管理和评审",
+                    "use_when": "研发协作在代码仓库中时"
+                  },
+                  {
+                    "name": "Linear / Jira",
+                    "role": "关联优先级、负责人和迭代",
+                    "use_when": "团队需要任务流转时"
+                  },
+                  {
+                    "name": "Example Mapping",
+                    "role": "通过规则与例子澄清验收",
+                    "use_when": "需求边界复杂时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「用户故事」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：明确具体用户角色而非所有用户；写出想完成的动作和业务价值；补充可验证的验收条件；拆分过大或包含多个结果的故事；与真实用户反馈或数据核对优先级。\n工具选择：优先使用 Markdown 模板，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：故事只描述一个结果，价值明确，验收条件可以通过产品行为判断"
+              }
+            },
+            {
+              "id": 36,
+              "category_id": 3,
+              "group_id": 6,
+              "name_zh": "用户用例",
+              "name_en": "Use Case",
+              "description": "把用户怎么发起、系统怎么回应写完整。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "用户用例描述参与者如何触发系统、系统如何响应，以及异常和替代路径。",
+                "why_it_matters": "它比一句用户故事更适合梳理权限、前置条件和多分支交互。",
+                "implementation_steps": [
+                  "列出主要参与者和前置条件",
+                  "写出正常成功路径的交互序列",
+                  "补充无权限、输入错误和依赖失败路径",
+                  "标明最终状态和数据变化",
+                  "把关键路径转成验收测试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Markdown 用例模板",
+                    "role": "清晰记录前置、主流程和异常",
+                    "use_when": "多数产品需求"
+                  },
+                  {
+                    "name": "Mermaid sequenceDiagram",
+                    "role": "展示参与者和系统交互顺序",
+                    "use_when": "跨服务或角色较多时"
+                  },
+                  {
+                    "name": "BDD Gherkin",
+                    "role": "把用例转成可执行场景",
+                    "use_when": "团队采用行为驱动开发时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「用户用例」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：列出主要参与者和前置条件；写出正常成功路径的交互序列；补充无权限、输入错误和依赖失败路径；标明最终状态和数据变化；把关键路径转成验收测试。\n工具选择：优先使用 Markdown 用例模板，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：正常与异常路径都有明确系统响应，前置条件和最终数据状态可验证"
+              }
+            },
+            {
+              "id": 37,
+              "category_id": 3,
+              "group_id": 6,
+              "name_zh": "用户流程",
+              "name_en": "User Flow",
+              "description": "画出用户从进来到完成目标经过的步骤。",
+              "visual_type": "flow",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "用户流程描述用户为完成一个目标经过的页面、决策和操作节点。",
+                "why_it_matters": "它揭示多余步骤、死路和错误恢复缺口，并直接指导路由与状态设计。",
+                "implementation_steps": [
+                  "选定单一目标和起点",
+                  "列出用户动作、系统反馈和决策分支",
+                  "标出登录、权限和失败恢复",
+                  "压缩不产生价值的重复步骤",
+                  "用可点击原型或测试逐步走通"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Mermaid flowchart",
+                    "role": "在文档和代码仓库中维护流程",
+                    "use_when": "流程需要版本管理时"
+                  },
+                  {
+                    "name": "FigJam",
+                    "role": "多人快速讨论和调整节点",
+                    "use_when": "产品设计共创时"
+                  },
+                  {
+                    "name": "Playwright",
+                    "role": "把关键流程转成真实浏览器验收",
+                    "use_when": "实现完成后"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「用户流程」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：选定单一目标和起点；列出用户动作、系统反馈和决策分支；标出登录、权限和失败恢复；压缩不产生价值的重复步骤；用可点击原型或测试逐步走通。\n工具选择：优先使用 Mermaid flowchart，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：主路径没有死路，每个操作都有反馈，失败可恢复，流程与实际页面路由一致"
+              }
+            },
+            {
+              "id": 38,
+              "category_id": 3,
+              "group_id": 6,
+              "name_zh": "用户旅程",
+              "name_en": "User Journey",
+              "description": "整理用户从了解到开始使用的完整过程。",
+              "visual_type": "flow",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "用户旅程覆盖用户从了解、评估、开始使用到持续使用的跨触点体验。",
+                "why_it_matters": "它把单次页面流程放回长期关系中，识别认知、信任和留存阶段的问题。",
+                "implementation_steps": [
+                  "定义用户角色、目标和旅程时间范围",
+                  "按阶段列出触点、动作、问题和情绪证据",
+                  "关联真实研究、客服或行为数据",
+                  "找到影响目标最大的机会点",
+                  "把机会转成负责人明确的实验"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "FigJam 旅程模板",
+                    "role": "可视化阶段和触点",
+                    "use_when": "跨职能工作坊"
+                  },
+                  {
+                    "name": "产品分析平台",
+                    "role": "验证行为漏斗和留存",
+                    "use_when": "已有事件数据时"
+                  },
+                  {
+                    "name": "访谈与客服记录",
+                    "role": "补充定性原因",
+                    "use_when": "需要理解动机和阻力时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「用户旅程」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义用户角色、目标和旅程时间范围；按阶段列出触点、动作、问题和情绪证据；关联真实研究、客服或行为数据；找到影响目标最大的机会点；把机会转成负责人明确的实验。\n工具选择：优先使用 FigJam 旅程模板，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：每个结论有证据来源，机会点能转成可执行实验，不把假设伪装成用户事实"
+              }
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "category_id": 3,
+          "name": "产品规划",
+          "sort_order": 1,
+          "terms": [
+            {
+              "id": 39,
+              "category_id": 3,
+              "group_id": 7,
+              "name_zh": "PRD",
+              "name_en": "",
+              "description": "把要做的东西、目标和验收标准写清楚。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "PRD 是对产品目标、用户问题、范围、行为和验收标准的共同约定。",
+                "why_it_matters": "它减少团队各自理解，但不应写成无法维护的百科或替代原型和接口契约。",
+                "implementation_steps": [
+                  "说明背景、目标和非目标",
+                  "定义用户、核心场景和成功指标",
+                  "描述范围、关键流程和业务规则",
+                  "列出异常、权限和数据要求",
+                  "为每项能力写可验证验收标准"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Markdown PRD",
+                    "role": "与代码一起评审和版本化",
+                    "use_when": "研发主导项目"
+                  },
+                  {
+                    "name": "飞书文档 / Notion",
+                    "role": "多人评论和业务协作",
+                    "use_when": "跨职能团队"
+                  },
+                  {
+                    "name": "原型链接",
+                    "role": "补充布局与交互意图",
+                    "use_when": "视觉和流程难用文字表达时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「PRD」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：说明背景、目标和非目标；定义用户、核心场景和成功指标；描述范围、关键流程和业务规则；列出异常、权限和数据要求；为每项能力写可验证验收标准。\n工具选择：优先使用 Markdown PRD，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：目标和非目标清楚，规则无冲突，研发无需猜测关键行为，验收标准可执行"
+              }
+            },
+            {
+              "id": 40,
+              "category_id": 3,
+              "group_id": 7,
+              "name_zh": "MVP",
+              "name_en": "",
+              "description": "先做最小的一版验证核心价值。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "MVP 是能验证最关键价值假设的最小可用产品，不是把完整产品每项都做得简陋。",
+                "why_it_matters": "正确 MVP 能用最少投入获得真实行为证据，并明确下一步继续、调整或停止。",
+                "implementation_steps": [
+                  "写出必须验证的单一核心假设",
+                  "选择最短的真实用户闭环",
+                  "删除不影响假设验证的功能",
+                  "定义上线前质量和安全底线",
+                  "设定样本、指标和复盘时间"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "现有技术栈",
+                    "role": "减少搭建成本并快速形成闭环",
+                    "use_when": "已有可复用项目时"
+                  },
+                  {
+                    "name": "托管后端 / SQLite",
+                    "role": "快速提供真实持久化",
+                    "use_when": "数据规模和合规允许时"
+                  },
+                  {
+                    "name": "功能开关",
+                    "role": "控制小范围验证和回滚",
+                    "use_when": "需要逐步开放时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「MVP」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：写出必须验证的单一核心假设；选择最短的真实用户闭环；删除不影响假设验证的功能；定义上线前质量和安全底线；设定样本、指标和复盘时间。\n工具选择：优先使用 现有技术栈，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：真实用户可完成核心闭环，指标能回答假设，安全与数据底线没有因追求速度被省略"
+              }
+            },
+            {
+              "id": 41,
+              "category_id": 3,
+              "group_id": 7,
+              "name_zh": "产品待办列表",
+              "name_en": "Product Backlog",
+              "description": "把需求按重要程度整理成待办列表。",
+              "visual_type": "table",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "产品待办列表是按价值、风险和依赖排序的可执行工作集合。",
+                "why_it_matters": "它让团队对下一步保持统一，但必须持续细化和删除过期项，不能成为愿望仓库。",
+                "implementation_steps": [
+                  "每项写清结果、价值和验收",
+                  "合并重复项并删除失效项",
+                  "按价值、风险、依赖和成本排序",
+                  "把近期事项拆到可交付大小",
+                  "定期复盘完成、阻塞和新增信息"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Linear",
+                    "role": "轻量管理产品与研发事项",
+                    "use_when": "小中型产品团队"
+                  },
+                  {
+                    "name": "Jira",
+                    "role": "支持复杂流程和组织治理",
+                    "use_when": "大型团队或合规流程"
+                  },
+                  {
+                    "name": "GitHub Issues",
+                    "role": "让需求靠近代码和 PR",
+                    "use_when": "工程主导项目"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「产品待办列表」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：每项写清结果、价值和验收；合并重复项并删除失效项；按价值、风险、依赖和成本排序；把近期事项拆到可交付大小；定期复盘完成、阻塞和新增信息。\n工具选择：优先使用 Linear，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：顶部事项可立即执行且有验收，重复和长期无价值事项被清理，排序理由可解释"
+              }
+            },
+            {
+              "id": 42,
+              "category_id": 3,
+              "group_id": 7,
+              "name_zh": "产品路线图",
+              "name_en": "Roadmap",
+              "description": "整理接下来几个阶段的重点目标。",
+              "visual_type": "flow",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "产品路线图按目标和时间窗口表达未来重点，不是承诺固定功能发布日期的甘特图。",
+                "why_it_matters": "以结果为中心的路线图能在新证据出现时调整，同时让团队理解当前取舍。",
+                "implementation_steps": [
+                  "按季度或 Now/Next/Later 定义时间粒度",
+                  "每个阶段写目标和可衡量结果",
+                  "把功能作为实现目标的候选方案",
+                  "标注关键依赖、风险和置信度",
+                  "建立定期复盘和变更说明"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Now/Next/Later 看板",
+                    "role": "降低虚假日期承诺",
+                    "use_when": "不确定性较高的产品"
+                  },
+                  {
+                    "name": "Productboard",
+                    "role": "连接反馈、目标和路线图",
+                    "use_when": "产品组合较复杂时"
+                  },
+                  {
+                    "name": "共享文档",
+                    "role": "保持轻量和易传播",
+                    "use_when": "团队规模较小"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「产品路线图」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：按季度或 Now/Next/Later 定义时间粒度；每个阶段写目标和可衡量结果；把功能作为实现目标的候选方案；标注关键依赖、风险和置信度；建立定期复盘和变更说明。\n工具选择：优先使用 Now/Next/Later 看板，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：每项能关联目标，时间表达与置信度匹配，变更有原因且不把探索项当成交付承诺"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "stack",
+      "label": "技术栈",
+      "title": "技术栈 VibeCoding 术语",
+      "sort_order": 3,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 6,
+      "groups": [
+        {
+          "id": 8,
+          "category_id": 4,
+          "name": "开发工具",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 43,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "React",
+              "name_en": "",
+              "description": "用组件和状态组织交互式网页。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "React 用组件和状态描述交互界面，并根据数据变化更新 DOM。",
+                "why_it_matters": "它适合复杂交互和复用，但组件边界、状态归属和副作用管理决定可维护性。",
+                "implementation_steps": [
+                  "从页面和数据流确定组件边界",
+                  "把状态放在最近共同拥有者",
+                  "保持渲染纯净，把外部同步放入有清理的 effect",
+                  "为列表使用稳定 key",
+                  "用组合代替层层布尔配置"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "React",
+                    "role": "组件与状态运行时",
+                    "use_when": "交互式 Web 应用"
+                  },
+                  {
+                    "name": "React Testing Library",
+                    "role": "按用户行为测试组件",
+                    "use_when": "关键交互回归"
+                  },
+                  {
+                    "name": "TanStack Query",
+                    "role": "管理远程数据状态",
+                    "use_when": "API 数据复杂时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「React 功能」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：从页面和数据流确定组件边界；把状态放在最近共同拥有者；保持渲染纯净，把外部同步放入有清理的 effect；为列表使用稳定 key；用组合代替层层布尔配置。\n工具选择：优先使用 React，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：组件职责清楚，effect 可清理，状态没有不必要上提，关键交互测试通过"
+              }
+            },
+            {
+              "id": 44,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "Next.js",
+              "name_en": "",
+              "description": "为 React 补齐路由和全栈能力。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Next.js 为 React 提供文件路由、服务端渲染、数据获取、资源优化和服务端能力。",
+                "why_it_matters": "它适合需要 SEO、多路由和全栈协作的产品，但不应为了单页静态工具无条件迁移。",
+                "implementation_steps": [
+                  "选择 App Router 并划分服务端与客户端组件",
+                  "把数据获取尽量放在服务端边界",
+                  "只为交互叶节点添加 use client",
+                  "使用框架元数据、图片和缓存 API",
+                  "检查动态路由、错误页和部署运行时"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Next.js App Router",
+                    "role": "构建 React 全栈与服务端页面",
+                    "use_when": "需要 SEO、路由和服务端数据时"
+                  },
+                  {
+                    "name": "Vercel / Node runtime",
+                    "role": "部署 Next.js",
+                    "use_when": "与运行时需求匹配时"
+                  },
+                  {
+                    "name": "Playwright",
+                    "role": "验证路由和水合行为",
+                    "use_when": "上线前"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Next.js 页面」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：选择 App Router 并划分服务端与客户端组件；把数据获取尽量放在服务端边界；只为交互叶节点添加 use client；使用框架元数据、图片和缓存 API；检查动态路由、错误页和部署运行时。\n工具选择：优先使用 Next.js App Router，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：首屏无需等待客户端请求才能看到主内容，客户端边界最小，动态路由和错误页可直接访问"
+              }
+            },
+            {
+              "id": 45,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "TypeScript",
+              "name_en": "",
+              "description": "提前约束数据形状，减少错误。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "TypeScript 在 JavaScript 上增加静态类型，描述数据、函数和组件接口。",
+                "why_it_matters": "它能在运行前发现结构错误并改善重构，但不能替代对外部输入的运行时校验。",
+                "implementation_steps": [
+                  "为领域数据和公共函数定义明确类型",
+                  "避免 any，未知输入先使用 unknown",
+                  "用联合类型表达有限状态",
+                  "从 schema 推导接口减少重复",
+                  "在边界使用运行时校验后再收窄"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "TypeScript strict mode",
+                    "role": "启用严格静态检查",
+                    "use_when": "新项目或可逐步迁移项目"
+                  },
+                  {
+                    "name": "Zod",
+                    "role": "校验 API、环境变量和表单输入",
+                    "use_when": "数据来自运行时外部时"
+                  },
+                  {
+                    "name": "tsc --noEmit",
+                    "role": "在 CI 中执行类型检查",
+                    "use_when": "构建工具不完整检查类型时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「TypeScript 类型」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：为领域数据和公共函数定义明确类型；避免 any，未知输入先使用 unknown；用联合类型表达有限状态；从 schema 推导接口减少重复；在边界使用运行时校验后再收窄。\n工具选择：优先使用 TypeScript strict mode，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：严格模式通过，公共接口无隐式 any，外部数据校验后才进入业务逻辑"
+              }
+            },
+            {
+              "id": 46,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "Vite",
+              "name_en": "",
+              "description": "快速启动现代前端项目并打包。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Vite 提供快速开发服务器和基于 Rollup 的生产构建。",
+                "why_it_matters": "它适合现代前端与 SPA，配置应保持最小并确保开发代理与生产路径一致。",
+                "implementation_steps": [
+                  "确认入口、别名和环境变量前缀",
+                  "配置开发 API 代理与固定端口",
+                  "按部署要求设置 base 和输出目录",
+                  "检查代码分割与静态资源路径",
+                  "用生产预览验证刷新和深链接"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Vite",
+                    "role": "开发与构建 React 等前端",
+                    "use_when": "SPA 或前端库"
+                  },
+                  {
+                    "name": "@vitejs/plugin-react",
+                    "role": "提供 React Fast Refresh 与转换",
+                    "use_when": "React 项目"
+                  },
+                  {
+                    "name": "vite preview",
+                    "role": "验证生产构建",
+                    "use_when": "发布前"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Vite 构建」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认入口、别名和环境变量前缀；配置开发 API 代理与固定端口；按部署要求设置 base 和输出目录；检查代码分割与静态资源路径；用生产预览验证刷新和深链接。\n工具选择：优先使用 Vite，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：开发和生产资源路径一致，深链接可回退，环境变量不会意外进入客户端"
+              }
+            },
+            {
+              "id": 47,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "Tailwind CSS",
+              "name_en": "",
+              "description": "用原子类快速组合界面样式。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Tailwind CSS 用受约束的原子类组合样式，并在构建时生成实际使用的 CSS。",
+                "why_it_matters": "它提高组合速度并减少命名争论，但仍需要统一令牌和组件边界，不能让任意值散落。",
+                "implementation_steps": [
+                  "安装与当前构建工具匹配的官方集成",
+                  "定义颜色、间距、字体和断点策略",
+                  "把重复组合收敛到组件而不是滥用 apply",
+                  "限制无依据任意值",
+                  "检查动态类名能被构建器发现"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Tailwind CSS v4",
+                    "role": "原子样式与设计令牌",
+                    "use_when": "新项目或已有 Tailwind 项目"
+                  },
+                  {
+                    "name": "class-variance-authority",
+                    "role": "管理组件变体组合",
+                    "use_when": "按钮等组件变体较多时"
+                  },
+                  {
+                    "name": "tailwind-merge",
+                    "role": "解决调用方类名冲突",
+                    "use_when": "允许外部 className 覆盖时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Tailwind CSS 样式」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：安装与当前构建工具匹配的官方集成；定义颜色、间距、字体和断点策略；把重复组合收敛到组件而不是滥用 apply；限制无依据任意值；检查动态类名能被构建器发现。\n工具选择：优先使用 Tailwind CSS v4，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：生产构建包含所需类，组件变体可预测，主题令牌集中且没有大规模任意值"
+              }
+            },
+            {
+              "id": 48,
+              "category_id": 4,
+              "group_id": 8,
+              "name_zh": "Node.js",
+              "name_en": "",
+              "description": "让 JavaScript 运行在服务器端。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "Node.js 让 JavaScript 在服务器、命令行和构建环境中运行。",
+                "why_it_matters": "它可统一前后端语言，但仍需处理异步错误、资源释放、安全边界和运行时版本。",
+                "implementation_steps": [
+                  "锁定支持的 Node 版本和模块类型",
+                  "使用异步 API 并集中处理未捕获错误",
+                  "校验环境变量和请求输入",
+                  "优雅关闭服务器、数据库和队列连接",
+                  "区分开发脚本与生产入口"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Node.js LTS",
+                    "role": "稳定服务器运行时",
+                    "use_when": "生产服务与脚本"
+                  },
+                  {
+                    "name": "Express / Fastify",
+                    "role": "处理 HTTP 路由与中间件",
+                    "use_when": "需要传统 Node API 服务时"
+                  },
+                  {
+                    "name": "tsx",
+                    "role": "直接运行 TypeScript 脚本",
+                    "use_when": "开发工具链允许时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Node.js 服务」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：锁定支持的 Node 版本和模块类型；使用异步 API 并集中处理未捕获错误；校验环境变量和请求输入；优雅关闭服务器、数据库和队列连接；区分开发脚本与生产入口。\n工具选择：优先使用 Node.js LTS，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：目标 LTS 可运行，异步错误返回受控响应，进程退出会释放资源，生产不使用开发监听器"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "ai",
+      "label": "AI",
+      "title": "AI VibeCoding 术语",
+      "sort_order": 4,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 6,
+      "groups": [
+        {
+          "id": 9,
+          "category_id": 5,
+          "name": "模型与提示",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 49,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "提示词",
+              "name_en": "Prompt",
+              "description": "把目标、背景、限制和输出格式说清楚。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "提示词向模型说明目标、背景、输入、限制和输出格式。",
+                "why_it_matters": "清晰提示词减少模型猜测，但真正稳定性来自足够上下文、工具约束和可验证结果。",
+                "implementation_steps": [
+                  "先写目标和成功标准",
+                  "提供完成任务所需的真实上下文",
+                  "明确不得改变的范围与权限",
+                  "定义输出结构和必要示例",
+                  "要求模型验证事实或说明不确定性"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "可复用提示模板",
+                    "role": "保持目标和约束完整",
+                    "use_when": "重复任务"
+                  },
+                  {
+                    "name": "结构化输出 schema",
+                    "role": "约束机器可读结果",
+                    "use_when": "结果进入后续程序时"
+                  },
+                  {
+                    "name": "评测数据集",
+                    "role": "比较提示词版本表现",
+                    "use_when": "高频或关键任务"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「提示词」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：先写目标和成功标准；提供完成任务所需的真实上下文；明确不得改变的范围与权限；定义输出结构和必要示例；要求模型验证事实或说明不确定性。\n工具选择：优先使用 可复用提示模板，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：不同输入下仍遵守范围和格式，事实不足时不编造，结果能按验收标准检查"
+              }
+            },
+            {
+              "id": 50,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "上下文",
+              "name_en": "Context",
+              "description": "提供模型完成任务所需的信息。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "上下文是模型在当前任务中可见的指令、文件、对话和工具结果。",
+                "why_it_matters": "相关且精确的上下文能提高正确率，过多无关材料会挤占注意力并引入冲突。",
+                "implementation_steps": [
+                  "列出完成任务真正需要的事实",
+                  "优先提供权威源和当前代码",
+                  "按任务阶段逐步加载参考资料",
+                  "移除重复、过期和互相冲突内容",
+                  "在长任务中持久化关键决策与状态"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "AGENTS.md",
+                    "role": "保存仓库级长期约定",
+                    "use_when": "跨任务都适用的规则"
+                  },
+                  {
+                    "name": "Skill references",
+                    "role": "按需加载专项知识",
+                    "use_when": "工作流复杂但不是每次都需要全部内容"
+                  },
+                  {
+                    "name": "检索系统",
+                    "role": "按问题取回相关片段",
+                    "use_when": "知识库规模较大时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「模型上下文」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：列出完成任务真正需要的事实；优先提供权威源和当前代码；按任务阶段逐步加载参考资料；移除重复、过期和互相冲突内容；在长任务中持久化关键决策与状态。\n工具选择：优先使用 AGENTS.md，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：模型能找到权威事实，输入中没有过期冲突，关键决策不会在长任务中丢失"
+              }
+            },
+            {
+              "id": 51,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "智能体",
+              "name_en": "Agent",
+              "description": "让模型规划步骤、调用工具并检查结果。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "智能体让模型围绕目标规划步骤、调用工具、观察结果并继续行动。",
+                "why_it_matters": "它适合需要多步判断和验证的任务，但每个外部副作用都必须受权限与停止条件约束。",
+                "implementation_steps": [
+                  "定义单一目标和完成条件",
+                  "只提供完成目标需要的工具和数据",
+                  "让智能体在行动后读取真实结果",
+                  "对高风险外部操作设置确认点",
+                  "限制重试次数并记录失败原因"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Codex",
+                    "role": "执行代码修改、测试和仓库操作",
+                    "use_when": "软件工程任务"
+                  },
+                  {
+                    "name": "OpenAI Responses API",
+                    "role": "构建带工具调用的智能体",
+                    "use_when": "应用内智能体"
+                  },
+                  {
+                    "name": "工作流引擎",
+                    "role": "编排确定性步骤和补偿",
+                    "use_when": "流程固定且需要可追踪时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「智能体工作流」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：定义单一目标和完成条件；只提供完成目标需要的工具和数据；让智能体在行动后读取真实结果；对高风险外部操作设置确认点；限制重试次数并记录失败原因。\n工具选择：优先使用 Codex，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：智能体能根据工具结果调整，达到停止条件后结束，外部副作用符合授权且失败不会无限重试"
+              }
+            },
+            {
+              "id": 52,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "幻觉",
+              "name_en": "Hallucination",
+              "description": "模型说得像真的，但事实并不成立。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "幻觉是模型生成看似可信但没有事实依据或与来源冲突的内容。",
+                "why_it_matters": "识别和控制幻觉是把 AI 输出用于产品、决策和代码的前提，不能只靠语气判断可靠性。",
+                "implementation_steps": [
+                  "区分可推理内容与必须查证的事实",
+                  "优先提供权威来源和时间范围",
+                  "要求引用与结论一一对应",
+                  "对未知信息允许明确说不知道",
+                  "用测试、类型检查或人工复核验证输出"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "权威检索源",
+                    "role": "提供可核对事实",
+                    "use_when": "问题涉及变化或专业知识时"
+                  },
+                  {
+                    "name": "自动评测",
+                    "role": "批量检测已知问题",
+                    "use_when": "高频 AI 功能"
+                  },
+                  {
+                    "name": "人工审核",
+                    "role": "处理高影响和开放式结果",
+                    "use_when": "医疗、法律、财务或公开发布前"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「幻觉控制」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：区分可推理内容与必须查证的事实；优先提供权威来源和时间范围；要求引用与结论一一对应；对未知信息允许明确说不知道；用测试、类型检查或人工复核验证输出。\n工具选择：优先使用 权威检索源，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：关键事实可追溯，来源不支持时模型不下结论，代码和结构化输出通过实际工具验证"
+              }
+            },
+            {
+              "id": 53,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "检索增强",
+              "name_en": "RAG",
+              "description": "先检索资料，再让模型据此回答。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 4,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "RAG 先从可信资料中检索相关片段，再让模型基于片段生成回答。",
+                "why_it_matters": "它能更新知识和提供依据，但检索质量、权限过滤和引用正确性比向量数据库名称更重要。",
+                "implementation_steps": [
+                  "整理权威文档并保留来源、时间和权限元数据",
+                  "按语义边界切分并建立索引",
+                  "结合关键词与向量检索召回候选",
+                  "重排后只提供最相关片段",
+                  "让答案引用来源并评测召回与忠实度"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "PostgreSQL + pgvector",
+                    "role": "同时管理业务数据和向量",
+                    "use_when": "已有 PostgreSQL 且规模适中"
+                  },
+                  {
+                    "name": "Elasticsearch/OpenSearch",
+                    "role": "结合关键词、过滤和向量",
+                    "use_when": "搜索需求复杂时"
+                  },
+                  {
+                    "name": "专用向量库",
+                    "role": "托管大规模向量检索",
+                    "use_when": "数据量和吞吐确实需要时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「RAG 检索增强」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：整理权威文档并保留来源、时间和权限元数据；按语义边界切分并建立索引；结合关键词与向量检索召回候选；重排后只提供最相关片段；让答案引用来源并评测召回与忠实度。\n工具选择：优先使用 PostgreSQL + pgvector，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：无权限文档不可召回，答案引用真实片段，评测同时覆盖召回率和回答忠实度"
+              }
+            },
+            {
+              "id": 54,
+              "category_id": 5,
+              "group_id": 9,
+              "name_zh": "多模态",
+              "name_en": "Multimodal",
+              "description": "同时理解文字、图片和声音。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 5,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "多模态模型可以联合理解或生成文字、图片、音频和视频等不同信息。",
+                "why_it_matters": "它能减少人工转录和跨工具切换，但每种模态都有格式、成本、隐私和质量验证要求。",
+                "implementation_steps": [
+                  "明确输入模态和目标输出",
+                  "在上传前校验格式、大小和权限",
+                  "保留原始素材与处理版本关联",
+                  "为图像、音频结果设计对应评测",
+                  "提供无法解析和低置信度的回退"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "支持视觉/音频的模型 API",
+                    "role": "统一处理多种输入",
+                    "use_when": "需要跨模态推理时"
+                  },
+                  {
+                    "name": "OCR/ASR 专用服务",
+                    "role": "提供稳定文字提取",
+                    "use_when": "任务主要是识别而非推理时"
+                  },
+                  {
+                    "name": "对象存储",
+                    "role": "保存原始和派生媒体",
+                    "use_when": "文件较大或需追溯时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「多模态处理」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：明确输入模态和目标输出；在上传前校验格式、大小和权限；保留原始素材与处理版本关联；为图像、音频结果设计对应评测；提供无法解析和低置信度的回退。\n工具选择：优先使用 支持视觉/音频的模型 API，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：输入限制清楚，失败有回退，输出能追溯原文件，敏感媒体不会被无权限访问"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "git",
+      "label": "Git",
+      "title": "Git VibeCoding 术语",
+      "sort_order": 5,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 4,
+      "groups": [
+        {
+          "id": 10,
+          "category_id": 6,
+          "name": "版本管理",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 55,
+              "category_id": 6,
+              "group_id": 10,
+              "name_zh": "提交",
+              "name_en": "Commit",
+              "description": "把一组相关改动保存为版本节点。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "提交是 Git 中一组有明确意图的文件变化和说明。",
+                "why_it_matters": "小而完整的提交便于评审、定位回归和回滚，不应混入无关格式化或临时文件。",
+                "implementation_steps": [
+                  "检查工作树并区分自己的改动",
+                  "只暂存同一意图需要的文件或代码块",
+                  "运行与改动相关的检查",
+                  "用动词说明改变了什么和为什么",
+                  "提交后检查差异与仓库状态"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "git status/diff",
+                    "role": "审阅待提交内容",
+                    "use_when": "每次提交前"
+                  },
+                  {
+                    "name": "git add -p",
+                    "role": "按代码块精确暂存",
+                    "use_when": "文件包含多个意图时"
+                  },
+                  {
+                    "name": "Conventional Commits",
+                    "role": "统一机器可读提交格式",
+                    "use_when": "团队已采用规范时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Git 提交」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：检查工作树并区分自己的改动；只暂存同一意图需要的文件或代码块；运行与改动相关的检查；用动词说明改变了什么和为什么；提交后检查差异与仓库状态。\n工具选择：优先使用 git status/diff，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：提交只包含一个意图，测试状态明确，不含密钥、构建产物或他人无关改动"
+              }
+            },
+            {
+              "id": 56,
+              "category_id": 6,
+              "group_id": 10,
+              "name_zh": "分支",
+              "name_en": "Branch",
+              "description": "在不影响主线的情况下开发功能。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "分支是指向一条提交历史的可移动引用，用于隔离开发工作。",
+                "why_it_matters": "清晰分支策略减少多人互相阻塞，但短生命周期分支通常比长期分叉更容易合并。",
+                "implementation_steps": [
+                  "从最新目标分支创建语义明确的分支",
+                  "保持改动聚焦并频繁提交",
+                  "定期同步目标分支并及时解决冲突",
+                  "推送后创建可审阅变更",
+                  "合并完成后按团队规则清理"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Git branch/switch",
+                    "role": "本地创建和切换分支",
+                    "use_when": "所有 Git 仓库"
+                  },
+                  {
+                    "name": "GitHub Pull Request",
+                    "role": "评审、检查和合并",
+                    "use_when": "托管在 GitHub 时"
+                  },
+                  {
+                    "name": "git worktree",
+                    "role": "并行维护多个分支目录",
+                    "use_when": "同时处理独立任务时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Git 分支」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：从最新目标分支创建语义明确的分支；保持改动聚焦并频繁提交；定期同步目标分支并及时解决冲突；推送后创建可审阅变更；合并完成后按团队规则清理。\n工具选择：优先使用 Git branch/switch，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：分支来源正确、命名可理解、只承载相关改动，合并前检查通过"
+              }
+            },
+            {
+              "id": 57,
+              "category_id": 6,
+              "group_id": 10,
+              "name_zh": "合并",
+              "name_en": "Merge",
+              "description": "把一个分支的改动整合到另一个分支。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "合并把两个分支的提交历史整合为一个可继续开发的结果。",
+                "why_it_matters": "合并的重点不是命令成功，而是组合后的系统行为正确并保留可审阅历史。",
+                "implementation_steps": [
+                  "拉取并确认目标与来源分支",
+                  "阅读双方差异和自动检查",
+                  "执行合并并逐个处理冲突",
+                  "运行覆盖双方交互面的测试",
+                  "检查最终 diff 后再推送"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "Git merge",
+                    "role": "保留分支合并关系",
+                    "use_when": "团队采用合并提交时"
+                  },
+                  {
+                    "name": "GitHub Merge Queue",
+                    "role": "串行验证并合并多个 PR",
+                    "use_when": "主分支并发较高时"
+                  },
+                  {
+                    "name": "Squash merge",
+                    "role": "压缩功能分支噪声",
+                    "use_when": "团队希望主线提交简洁时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Git 合并」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：拉取并确认目标与来源分支；阅读双方差异和自动检查；执行合并并逐个处理冲突；运行覆盖双方交互面的测试；检查最终 diff 后再推送。\n工具选择：优先使用 Git merge，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：组合代码通过测试，冲突解决没有静默丢失功能，历史符合仓库策略"
+              }
+            },
+            {
+              "id": 58,
+              "category_id": 6,
+              "group_id": 10,
+              "name_zh": "冲突",
+              "name_en": "Conflict",
+              "description": "两边改到同一处，需要决定保留什么。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "冲突发生在 Git 无法自动判断同一区域应保留哪一侧修改时。",
+                "why_it_matters": "解决冲突需要理解双方意图，不能机械选择 ours 或 theirs，否则可能生成语法正确但行为缺失的代码。",
+                "implementation_steps": [
+                  "查看冲突文件和两侧相关提交",
+                  "理解每侧要实现的行为",
+                  "手工组合正确逻辑并删除标记",
+                  "搜索是否还有未解决标记",
+                  "运行最接近冲突区域的测试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "git diff --cc",
+                    "role": "查看冲突合并视图",
+                    "use_when": "命令行解决冲突"
+                  },
+                  {
+                    "name": "编辑器 Merge Editor",
+                    "role": "并排理解并组合两侧",
+                    "use_when": "复杂文本冲突"
+                  },
+                  {
+                    "name": "git log/show",
+                    "role": "追溯双方修改意图",
+                    "use_when": "仅看片段无法判断时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「Git 冲突解决」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：查看冲突文件和两侧相关提交；理解每侧要实现的行为；手工组合正确逻辑并删除标记；搜索是否还有未解决标记；运行最接近冲突区域的测试。\n工具选择：优先使用 git diff --cc，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：不存在冲突标记，双方必要行为都保留，相关测试与构建通过"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "design",
+      "label": "设计风格",
+      "title": "设计风格 VibeCoding 术语",
+      "sort_order": 6,
+      "is_visible": 1,
+      "created_at": "2026-08-25 02:14:05",
+      "updated_at": "2026-08-25 02:14:05",
+      "count": 4,
+      "groups": [
+        {
+          "id": 11,
+          "category_id": 7,
+          "name": "视觉方向",
+          "sort_order": 0,
+          "terms": [
+            {
+              "id": 59,
+              "category_id": 7,
+              "group_id": 11,
+              "name_zh": "极简主义",
+              "name_en": "Minimalism",
+              "description": "减少非必要元素，突出核心内容。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 0,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "极简主义通过减少非必要元素、收紧层级和突出核心任务形成清晰界面。",
+                "why_it_matters": "它不是空白越多越好，而是每个保留元素都有作用，功能、可访问性和品牌识别不能被删掉。",
+                "implementation_steps": [
+                  "明确页面唯一主任务和信息优先级",
+                  "移除重复文案、装饰和同义操作",
+                  "用字号、间距和对比建立层级",
+                  "保留必要反馈、导航和无障碍标签",
+                  "在真实内容长度下检查是否仍然清晰"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 CSS + 设计令牌",
+                    "role": "精确控制层级与留白",
+                    "use_when": "品牌需要自定义视觉时"
+                  },
+                  {
+                    "name": "Radix Primitives",
+                    "role": "提供低视觉噪声的可访问交互",
+                    "use_when": "需要复杂控件但不想引入完整皮肤时"
+                  },
+                  {
+                    "name": "内容审计",
+                    "role": "先减少无效信息",
+                    "use_when": "视觉调整前"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「极简主义界面」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：明确页面唯一主任务和信息优先级；移除重复文案、装饰和同义操作；用字号、间距和对比建立层级；保留必要反馈、导航和无障碍标签；在真实内容长度下检查是否仍然清晰。\n工具选择：优先使用 原生 CSS + 设计令牌，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：主任务一眼可见，没有功能因追求留白被隐藏，真实长内容仍有稳定层级"
+              }
+            },
+            {
+              "id": 60,
+              "category_id": 7,
+              "group_id": 11,
+              "name_zh": "粗野主义",
+              "name_en": "Brutalism",
+              "description": "用直接且粗粝的视觉表达态度。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 1,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "粗野主义在 Web 中使用直接结构、强边框、原始排版和明显交互表达态度。",
+                "why_it_matters": "它可以强化品牌个性，但不能把低可用性、无响应式或低对比度包装成风格。",
+                "implementation_steps": [
+                  "确认品牌和受众接受强烈视觉语言",
+                  "选择有限字体、颜色和边框规则",
+                  "用真实内容结构制造节奏而非随机错位",
+                  "保持按钮、表单和焦点清楚可用",
+                  "在移动端降低会妨碍阅读的极端布局"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 CSS",
+                    "role": "控制边框、排版和布局",
+                    "use_when": "需要独特且轻量的视觉"
+                  },
+                  {
+                    "name": "CSS Grid",
+                    "role": "建立刻意而稳定的不对称",
+                    "use_when": "复杂版式"
+                  },
+                  {
+                    "name": "axe",
+                    "role": "防止风格损害可访问性",
+                    "use_when": "验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「粗野主义视觉」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：确认品牌和受众接受强烈视觉语言；选择有限字体、颜色和边框规则；用真实内容结构制造节奏而非随机错位；保持按钮、表单和焦点清楚可用；在移动端降低会妨碍阅读的极端布局。\n工具选择：优先使用 原生 CSS，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：风格规则一致，核心任务仍清楚，键盘和移动端可用，对比度达标"
+              }
+            },
+            {
+              "id": 61,
+              "category_id": 7,
+              "group_id": 11,
+              "name_zh": "玻璃拟态",
+              "name_en": "Glassmorphism",
+              "description": "用半透明和背景模糊营造层次。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 2,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "玻璃拟态用半透明表面、背景模糊和细边缘表现层级，是 Web 对磨砂玻璃的视觉模拟。",
+                "why_it_matters": "它只在有真实背景层和层级关系时有效，不能靠模糊掩盖信息结构，并必须提供无透明度回退。",
+                "implementation_steps": [
+                  "限定玻璃只用于浮层或明确提升层级的区域",
+                  "使用半透明背景、内边框和克制模糊",
+                  "保证文字在复杂背景上仍达对比度",
+                  "为不支持模糊和减少透明度偏好提供实色回退",
+                  "检查滚动性能和移动设备发热"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 backdrop-filter",
+                    "role": "实现 Web 磨砂玻璃效果",
+                    "use_when": "浏览器支持且层级确实需要时"
+                  },
+                  {
+                    "name": "Radix Dialog/Popover",
+                    "role": "提供浮层行为与焦点管理",
+                    "use_when": "玻璃表面承载弹窗或菜单时"
+                  },
+                  {
+                    "name": "纯色 surface token",
+                    "role": "作为可访问与性能回退",
+                    "use_when": "所有玻璃实现"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「玻璃拟态」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：限定玻璃只用于浮层或明确提升层级的区域；使用半透明背景、内边框和克制模糊；保证文字在复杂背景上仍达对比度；为不支持模糊和减少透明度偏好提供实色回退；检查滚动性能和移动设备发热。\n工具选择：优先使用 原生 backdrop-filter，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：无模糊时仍可读，文字对比达标，效果只用于真实层级且滚动流畅"
+              }
+            },
+            {
+              "id": 62,
+              "category_id": 7,
+              "group_id": 11,
+              "name_zh": "新拟态",
+              "name_en": "Neumorphism",
+              "description": "用柔和高光与阴影模拟表面。",
+              "visual_type": "generic",
+              "status": "published",
+              "sort_order": 3,
+              "created_at": "2026-08-25 02:14:05",
+              "updated_at": "2026-08-25 02:14:05",
+              "details": {
+                "definition": "新拟态用同色系高光和阴影模拟元素从背景凸起或凹下。",
+                "why_it_matters": "它容易造成边界和状态不清，只适合少量装饰或低风险控件，不应承担主要可用性提示。",
+                "implementation_steps": [
+                  "先确认风格适合受众和可访问要求",
+                  "限制在少量非关键表面",
+                  "同时使用边框、文字或图标表达状态",
+                  "为按下、焦点和禁用提供非阴影信号",
+                  "在低对比屏幕和深色模式测试"
+                ],
+                "recommended_tools": [
+                  {
+                    "name": "原生 CSS box-shadow",
+                    "role": "控制内外阴影与背景关系",
+                    "use_when": "少量定制表面"
+                  },
+                  {
+                    "name": "设计令牌",
+                    "role": "统一光源、阴影和表面色",
+                    "use_when": "需要多个相关组件时"
+                  },
+                  {
+                    "name": "对比度检查工具",
+                    "role": "防止边界不可见",
+                    "use_when": "实现和验收时"
+                  }
+                ],
+                "codex_task": "目标：在当前项目中正确实施「新拟态」。\n上下文：先检查现有技术栈、目录、复用模式和相关测试，不替换正在工作的架构。\n修改范围：先确认风格适合受众和可访问要求；限制在少量非关键表面；同时使用边框、文字或图标表达状态；为按下、焦点和禁用提供非阴影信号；在低对比屏幕和深色模式测试。\n工具选择：优先使用 原生 CSS box-shadow，只有满足适用条件时才引入替代工具。\n约束：保持现有品牌与交互习惯，覆盖加载、空、错误和无障碍状态，不提交密钥或无关重构。\n验收：不依赖阴影也能辨认控件和状态，焦点清晰，关键操作不使用低对比边界"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

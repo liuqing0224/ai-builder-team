@@ -2,7 +2,7 @@ import express from "express";
 import { randomBytes } from "node:crypto";
 import { resolve } from "node:path";
 import { existsSync } from "node:fs";
-import { db, DB_PATH, publicCatalog, verifyPassword } from "./db.mjs";
+import { db, DB_PATH, publicCatalog, publicTerm, termResponse, verifyPassword } from "./db.mjs";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3001);
@@ -18,9 +18,24 @@ const sessionFor = req => {
 const requireAdmin = (req,res,next) => { const admin = sessionFor(req); if (!admin) return res.status(401).json({ error:"请先登录" }); req.admin=admin; next(); };
 const clean = value => typeof value === "string" ? value.trim() : value;
 const required = (body, fields) => fields.every(field => clean(body[field]));
+const validateDetails = details => {
+  if (!details || typeof details !== "object") return "请填写实施指南";
+  if (!["definition","why_it_matters","codex_task"].every(key => clean(details[key]))) return "请填写完整的实施指南";
+  if (!Array.isArray(details.implementation_steps) || !details.implementation_steps.length || details.implementation_steps.some(step => !clean(step))) return "请至少填写一个有效实施步骤";
+  if (!Array.isArray(details.recommended_tools) || !details.recommended_tools.length || details.recommended_tools.some(tool => !clean(tool?.name) || !clean(tool?.role) || !clean(tool?.use_when))) return "请填写完整的工具推荐";
+  return "";
+};
+const detailsString = details => JSON.stringify({
+  definition:clean(details.definition),
+  why_it_matters:clean(details.why_it_matters),
+  implementation_steps:details.implementation_steps.map(clean),
+  recommended_tools:details.recommended_tools.map(tool => ({name:clean(tool.name),role:clean(tool.role),use_when:clean(tool.use_when)})),
+  codex_task:clean(details.codex_task),
+});
 
 app.get("/api/health", (_req,res) => res.json({ ok:true, database:DB_PATH }));
 app.get("/api/catalog", (_req,res) => res.json({ categories:publicCatalog() }));
+app.get("/api/terms/:id", (req,res) => { const id=Number(req.params.id);if(!Number.isInteger(id)||id<1)return res.status(404).json({error:"没有找到这个术语"});const term=publicTerm(id);if(!term)return res.status(404).json({error:"没有找到这个术语"});res.json({term}); });
 app.post("/api/survey", (req,res) => { if (!clean(req.body.source)) return res.status(400).json({ error:"缺少渠道" }); db.prepare("INSERT INTO survey_responses (source) VALUES (?)").run(clean(req.body.source).slice(0,50)); res.status(201).json({ ok:true }); });
 
 app.post("/api/admin/login", (req,res) => {
@@ -50,9 +65,9 @@ app.post("/api/admin/groups", requireAdmin, (req,res) => { if(!required(req.body
 app.put("/api/admin/groups/:id", requireAdmin, (req,res) => { db.prepare("UPDATE term_groups SET category_id=?,name=?,sort_order=? WHERE id=?").run(req.body.category_id,clean(req.body.name),Number(req.body.sort_order)||0,req.params.id);res.json({ok:true}); });
 app.delete("/api/admin/groups/:id", requireAdmin, (req,res) => { db.prepare("DELETE FROM term_groups WHERE id=?").run(req.params.id);res.json({ok:true}); });
 
-app.get("/api/admin/terms", requireAdmin, (req,res) => { const q=`%${clean(req.query.q || "")}%`; const category=req.query.category_id || null; const rows=db.prepare("SELECT terms.*,categories.label category,term_groups.name group_name FROM terms JOIN categories ON categories.id=terms.category_id JOIN term_groups ON term_groups.id=terms.group_id WHERE (? IS NULL OR terms.category_id=?) AND (terms.name_zh LIKE ? OR terms.name_en LIKE ? OR terms.description LIKE ?) ORDER BY terms.updated_at DESC,terms.id DESC").all(category,category,q,q,q);res.json({terms:rows}); });
-app.post("/api/admin/terms", requireAdmin, (req,res) => { if(!required(req.body,["category_id","group_id","name_zh","description"])) return res.status(400).json({error:"请填写完整"});const result=db.prepare("INSERT INTO terms (category_id,group_id,name_zh,name_en,description,visual_type,status,sort_order) VALUES (?,?,?,?,?,?,?,?)").run(req.body.category_id,req.body.group_id,clean(req.body.name_zh),clean(req.body.name_en||""),clean(req.body.description),clean(req.body.visual_type||"generic"),req.body.status==="draft"?"draft":"published",Number(req.body.sort_order)||0);res.status(201).json({id:Number(result.lastInsertRowid)}); });
-app.put("/api/admin/terms/:id", requireAdmin, (req,res) => { if(!required(req.body,["category_id","group_id","name_zh","description"])) return res.status(400).json({error:"请填写完整"});db.prepare("UPDATE terms SET category_id=?,group_id=?,name_zh=?,name_en=?,description=?,visual_type=?,status=?,sort_order=?,updated_at=CURRENT_TIMESTAMP WHERE id=?").run(req.body.category_id,req.body.group_id,clean(req.body.name_zh),clean(req.body.name_en||""),clean(req.body.description),clean(req.body.visual_type||"generic"),req.body.status==="draft"?"draft":"published",Number(req.body.sort_order)||0,req.params.id);res.json({ok:true}); });
+app.get("/api/admin/terms", requireAdmin, (req,res) => { const q=`%${clean(req.query.q || "")}%`; const category=req.query.category_id || null; const rows=db.prepare("SELECT terms.*,categories.label category,term_groups.name group_name FROM terms JOIN categories ON categories.id=terms.category_id JOIN term_groups ON term_groups.id=terms.group_id WHERE (? IS NULL OR terms.category_id=?) AND (terms.name_zh LIKE ? OR terms.name_en LIKE ? OR terms.description LIKE ?) ORDER BY terms.updated_at DESC,terms.id DESC").all(category,category,q,q,q);res.json({terms:rows.map(termResponse)}); });
+app.post("/api/admin/terms", requireAdmin, (req,res) => { if(!required(req.body,["category_id","group_id","name_zh","description"])) return res.status(400).json({error:"请填写完整"});const detailError=validateDetails(req.body.details);if(detailError)return res.status(400).json({error:detailError});const result=db.prepare("INSERT INTO terms (category_id,group_id,name_zh,name_en,description,visual_type,details_json,status,sort_order) VALUES (?,?,?,?,?,?,?,?,?)").run(req.body.category_id,req.body.group_id,clean(req.body.name_zh),clean(req.body.name_en||""),clean(req.body.description),clean(req.body.visual_type||"generic"),detailsString(req.body.details),req.body.status==="draft"?"draft":"published",Number(req.body.sort_order)||0);res.status(201).json({id:Number(result.lastInsertRowid)}); });
+app.put("/api/admin/terms/:id", requireAdmin, (req,res) => { if(!required(req.body,["category_id","group_id","name_zh","description"])) return res.status(400).json({error:"请填写完整"});const detailError=validateDetails(req.body.details);if(detailError)return res.status(400).json({error:detailError});db.prepare("UPDATE terms SET category_id=?,group_id=?,name_zh=?,name_en=?,description=?,visual_type=?,details_json=?,status=?,sort_order=?,updated_at=CURRENT_TIMESTAMP WHERE id=?").run(req.body.category_id,req.body.group_id,clean(req.body.name_zh),clean(req.body.name_en||""),clean(req.body.description),clean(req.body.visual_type||"generic"),detailsString(req.body.details),req.body.status==="draft"?"draft":"published",Number(req.body.sort_order)||0,req.params.id);res.json({ok:true}); });
 app.delete("/api/admin/terms/:id", requireAdmin, (req,res) => { db.prepare("DELETE FROM terms WHERE id=?").run(req.params.id);res.json({ok:true}); });
 
 const clientDir=resolve("dist/client");
