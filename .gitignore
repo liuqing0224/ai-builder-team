@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local runtime data
+data/*.db
+data/*.db-*
+
+# Local visual QA artifacts
+/*.png
+
+# Superseded local brand assets
+public/assets/oil-avatar.png
+public/assets/termark-logo.svg
+public/assets/vibehub-logo.png
